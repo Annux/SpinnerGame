@@ -20,4 +20,4 @@
                 break;
     }
     global.scatterActive = 1;
-}*/ //has beenadded as a piece of code instead of script
+}*/ //has beenadded as a piece of code instead of script.
