@@ -29,6 +29,10 @@
         <sprite>sprites\spr_BombSpinIcon</sprite>
         <sprite>sprites\spr_DamageSpinIcon</sprite>
       </sprites>
+      <sprite>sprites\spr_statusbar</sprite>
+      <sprite>sprites\spr_banner_blue</sprite>
+      <sprite>sprites\spr_banner_red</sprite>
+      <sprite>sprites\spr_lifebar</sprite>
     </sprites>
     <sprites name="manabar">
       <sprite>sprites\spr_Bar_Back</sprite>
@@ -38,6 +42,7 @@
       <sprite>sprites\spr_YellowManaBar</sprite>
       <sprite>sprites\spr_RedManaBar</sprite>
       <sprite>sprites\spr_BlueManaBar</sprite>
+      <sprite>sprites\spr_statbars</sprite>
     </sprites>
     <sprites name="spell buttons">
       <sprite>sprites\spr_Individual_Button</sprite>
@@ -62,6 +67,11 @@
       <sprite>sprites\spr_classSelect</sprite>
     </sprites>
     <sprite>sprites\spr_toolTip</sprite>
+    <sprite>sprites\spr_Avatar_1</sprite>
+    <sprite>sprites\spr_avatar2</sprite>
+    <sprite>sprites\spr_back_button</sprite>
+    <sprite>sprites\spr_coin</sprite>
+    <sprite>sprites\spr_infobar_thing</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
