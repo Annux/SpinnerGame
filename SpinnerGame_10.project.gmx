@@ -62,7 +62,6 @@
       <sprite>sprites\spr_classSelect</sprite>
     </sprites>
     <sprite>sprites\spr_toolTip</sprite>
-    <sprite>sprites\sprite43</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
