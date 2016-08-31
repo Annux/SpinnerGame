@@ -1,6 +1,6 @@
 draw_self();
 
-for(var i = 0; i < numberOfColumns; i++)
+/*for(var i = 0; i < numberOfColumns; i++)
 {
     for(var j = 0; j < symbolsPerColumn; j++)
     {
