@@ -8,6 +8,6 @@ for(var i = 0; i < global.manaTypes; i++)
 }
 // Setting the actual spellcosts here;
 spellCost[manaType.red] = 5;
-spellCost[manaType.yellow] = 1;
+spellCost[manaType.purple] = 1;
 
 spellEffectDur = .1*room_speed;

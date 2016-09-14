@@ -1,5 +1,5 @@
 // CREATION //
-
+show_debug_message("Creating the spinner");
 ////////////////////////////////////////////////////////////
 // --------------------- COLUMNS ------------------------ //
 //   Create all the columns and store thier x positions   //
@@ -21,7 +21,7 @@ for(var i = 0; i < numberOfColumns; i++)
     // Create all the mana symbols (NOTE this method assumes there is initially an equal amount of each types of mana)
     for(var n = 0; n < manaPerColumn; n++)
     {
-        ds_list_add(spinnerList[i],obj_redmana,obj_bluemana,obj_greenmana,obj_yellowmana);
+        ds_list_add(spinnerList[i],obj_redmana,obj_bluemana,obj_greenmana,obj_purplemana);
     }
 
     // Create all the wild symbols in all middle columns
@@ -37,7 +37,6 @@ for(var i = 0; i < numberOfColumns; i++)
     symbolStockList[i] = ds_list_create();
     for(var n = 0; n < ds_list_size(spinnerList[i]); n++)
     {
-        show_debug_message(ds_list_find_value(spinnerList[i], n));
         ds_list_add(symbolStockList[i], ds_list_find_value(spinnerList[i], n));
     }
 
@@ -63,7 +62,6 @@ for(var i = 0; i < numberOfColumns; i++)
         }
         // create a symbol object for every row position
         var lastStockItem = ds_list_find_value(symbolStockList[i], ds_list_size(symbolStockList[i])-1); // retrieve the last item in stock
-        show_debug_message(string(lastStockItem))
         symbolObject[i, j] = instance_create(colPos[i], rowPos[j], lastStockItem);                      // drop it into the top spot of the column
         ds_list_delete(symbolStockList[i], ds_list_size(symbolStockList[i])-1);                         // remove it from the list
     }
@@ -92,11 +90,3 @@ for(var i = 0; i < numberOfColumns; i++)
         //neutralPosition[i, j] = true; // variable which stores whether or not a position is available (so 2 neutrals don't spawn in the same place)
     }
 }
-
-// Dear Snow,
-//
-// How are you? Today I saw a butterfly
-// It reminded me of the sun, and how it blesses us with it's wonderful, radiant rays.
-// It would be a shame if Donald Trump blew up the sun.
-// ...........
-// Hilary 2016

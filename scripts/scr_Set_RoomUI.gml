@@ -4,8 +4,7 @@
     switch(room)
     {
         case(Setup_Room):
-            //room_goto(InGame_Screen) // PLACEHOLDER
-            room_goto(Main_Menu) //PLACEHOLDER
+            room_goto(Main_Menu)
             break
         case(Main_Menu):
             scr_MainMenu_Layout()

@@ -16,7 +16,7 @@ for(var i = 0; i < numberOfColumns; i++) // create the columns
     spinnerList[i] = ds_list_create();
     // Create all the mana symbols
     for(var n = 0; n < manaPerColumn; n++)
-        ds_list_add(spinnerList[i],obj_redmana,obj_bluemana,obj_greenmana,obj_yellowmana);
+        ds_list_add(spinnerList[i],obj_redmana,obj_bluemana,obj_greenmana,obj_purplemana);
 
     // Create all the wild symbols
     for(var n = 0; n < wildsPerColumn; n++)

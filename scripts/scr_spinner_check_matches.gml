@@ -45,25 +45,25 @@ for(var i = 0; i < numberOfRows; i++)
     // Awards player 1 or 2 based on the outcome of the matches
     switch(Type)
     {
-        case (obj_yellowmana):
-            show_debug_message("+" + string(value) + " yellows");
-            global.manaBar[global.turn,manaType.yellow].curMana += value;
-            global.player[global.turn].curMana[manaType.yellow] += value;
+        case (obj_purplemana):
+            show_debug_message("+" + string(value) + " purples");
+            global.manaBar[global.turn,manaType.purple].curMana += value;
+            //global.player[global.turn].curMana[manaType.purple] += value;
             break;
         case (obj_greenmana):
             show_debug_message("+" + string(value) + " greens");
             global.manaBar[global.turn,manaType.green].curMana += value;
-            global.player[global.turn].curMana[manaType.green] += value;
+            //global.player[global.turn].curMana[manaType.green] += value;
             break;
         case (obj_redmana):
             show_debug_message("+" + string(value) + " reds");
             global.manaBar[global.turn,manaType.red].curMana += value;
-            global.player[global.turn].curMana[manaType.red] += value;
+            //global.player[global.turn].curMana[manaType.red] += value;
             break;
         case (obj_bluemana):
             show_debug_message("+" + string(value) + " blues");
             global.manaBar[global.turn,manaType.blue].curMana += value;
-            global.player[global.turn].curMana[manaType.blue] += value;
+            //global.player[global.turn].curMana[manaType.blue] += value;
             break;
     }
 }

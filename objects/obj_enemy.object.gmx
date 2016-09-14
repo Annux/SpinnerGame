@@ -3,7 +3,7 @@
   <spriteName>spr_Player2_Profile</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-12</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -107,7 +107,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>scr_enemy_step</script>
+            <script>scr_player_step</script>
           </argument>
           <argument>
             <kind>0</kind>

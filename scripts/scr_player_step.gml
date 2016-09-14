@@ -1,25 +1,28 @@
-// Enabling/Disabling Buttons based on mana cost
-for(var v = 0; v < global.numSpellButtons; v++)
+// CHECKING MANA & BUTTONS
+for(var spellindex = 0; spellindex < global.numSpellButtons; spellindex++)
 {
-    var haveEnoughMana = true;
-    for(var w = 0; w < global.numManaBars; w++)
+    // Enabling/Disabling Buttons based on mana cost
+    if(global.turn == playerNumber)
     {
-        if(global.spellButton[playerNumber, v].spellCost[w] > curMana[w])
+        // Checking if there is sufficient mana
+        var haveEnoughMana = true;
+        for(var manaindex = 0; manaindex < global.numManaBars; manaindex++)
         {
-            haveEnoughMana = false;
+            if(myBanner.spellButton[spellindex].spellCost[manaindex] > myHUD.manaBar[manaindex].curMana)
+            {
+                haveEnoughMana = false;
+            }
+            //global.manaBar[playerNumber, w].curMana = curMana[w];
         }
-        global.manaBar[playerNumber, w].curMana = curMana[w];
-    }
-    if(global.turn = playerNumber)
-    {
-        global.spellButton[playerNumber, v].buttonEnabled = haveEnoughMana;
+        myBanner.spellButton[spellindex].buttonEnabled = haveEnoughMana;
     }
     else 
     {
-        global.spellButton[playerNumber, v].buttonEnabled = false;
+        myBanner.spellButton[spellindex].buttonEnabled = false;
     }
 }
 
+// CHECKING HEALTH
 if(TakeDamage > 0)
 {
     scr_unit_takedamage();

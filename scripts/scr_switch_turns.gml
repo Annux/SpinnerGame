@@ -9,8 +9,8 @@ switch(curTurn)
         global.turn = 2;
         for(var n = 0; n < global.numSpellButtons; n++)
         {
-            global.spellButton[1,n].buttonEnabled = false
-            global.spellButton[2,n].buttonEnabled = true
+            global.spellButton[1,n].buttonEnabled = false;
+            global.spellButton[2,n].buttonEnabled = true;
         }
         break;
     case (2):
@@ -18,8 +18,8 @@ switch(curTurn)
         global.turn = 1;
         for(var n = 0; n < global.numSpellButtons; n++)
         {
-            global.spellButton[2,n].buttonEnabled = false
-            global.spellButton[1,n].buttonEnabled = true
+            global.spellButton[2,n].buttonEnabled = false;
+            global.spellButton[1,n].buttonEnabled = true;
         }
         break;
 }

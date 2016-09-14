@@ -1,13 +1,13 @@
 global.manaTypes = 4;
-enum manaType {yellow = 0, green = 1, red = 2, blue = 3};
-global.ManaColor[manaType.yellow] = c_yellow;
-global.ManaColor[manaType.green] = c_green;
-global.ManaColor[manaType.red] = c_red;
-global.ManaColor[manaType.blue] = c_blue;
-global.numManaBars = global.manaTypes;
+enum manaType {green = 0, blue = 1, purple = 2, red = 3};
+global.ManaColor[manaType.green] = $92b933;
+global.ManaColor[manaType.blue]  = $dc7542;
+global.ManaColor[manaType.purple]= $c73d8e;
+global.ManaColor[manaType.red]   = $3737f5;
 global.scatterActive = 0; //for when a scatter symbol is placed. 0 = not active, 1 = active, 2 = active and the slot machine has moved at least once.
 
-global.numSpellButtons = 3; // the number of spells a character can cast
+global.numSpellButtons = 4; // the number of spells a character can cast
+global.numManaBars = global.manaTypes;
 
 global.turn = 1;
 global.actionsPerTurn = 3;
