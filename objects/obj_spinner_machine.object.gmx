@@ -3,7 +3,7 @@
   <spriteName>spr_Spinner_FG</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>1</depth>
+  <depth>2</depth>
   <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -271,7 +271,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>scr_spinner_DEBUGDRAW</script>
+            <script>scr_spinner_draw</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -313,7 +313,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_scatter_spawn(obj_purplemana, obj_purpleSpell)
+            <string>scr_scatter_spawn(obj_bomb, obj_bombSpell)
 </string>
           </argument>
         </arguments>

@@ -53,14 +53,14 @@ matchValue[4] = 32;
 
 ///////////////////////// DRAWING POSITIONS /////////////////////////
 /////////////////////////////////////////////////////////////////////
-columnCenter = x-2*global.sizeH; // the center column position
-columnSeperation = 220*global.sizeH; // the seperation between columns
+columnCenter = x-10*global.sizeH; // the center column position |||||||||||||||||||| NOTE: this variable should simply be "Y" but it is not because the sprite is a bit off
+columnSeperation = sprite_width/5; // the seperation between columns
 
-rowCenter = y + 100*global.sizeH; // the center row position
-rowSeperation = 200*global.sizeH; // the seperation between columns
+rowCenter = y + 25*global.sizeH; // the center row position |||||||||||||||||||| NOTE: this variable should simply be "Y" but it is not because the sprite is a bit off
+rowSeperation = sprite_height/4; // the seperation between rows
 
-topLimit = y - sprite_height*global.sizeH / 10; // the highest point you can drag to with your finger
-bottomLimit = y + sprite_height*global.sizeH / 5; // the lowest point you can drag to with you finger
+topLimit = y - rowSeperation/4; // the highest point you can drag to with your finger
+bottomLimit = y + sprite_height*global.sizeH; // the lowest point you can drag to with you finger
 
 //////////////////////////// LOGIC VARIABLES///////////////////////////////
 // Please note that most (if not all) of these variables will not change //

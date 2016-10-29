@@ -1,5 +1,7 @@
 // CREATION //
 show_debug_message("Creating the spinner");
+//instance_create(x, y, obj_spinner_BG);
+
 ////////////////////////////////////////////////////////////
 // --------------------- COLUMNS ------------------------ //
 //   Create all the columns and store thier x positions   //
@@ -24,7 +26,7 @@ for(var i = 0; i < numberOfColumns; i++)
         ds_list_add(spinnerList[i],obj_redmana,obj_bluemana,obj_greenmana,obj_purplemana);
     }
 
-    // Create all the wild symbols in all middle columns
+    // Create all the wild symbols in all middle columns (wilds do not appear in row 0 or the last row because starting a chain on a wild is OP opie)
     if(i < numberOfColumns - 1 && i > 0)
     {
         for(var n = 0; n < wildsPerColumn; n++)

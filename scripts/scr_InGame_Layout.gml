@@ -9,10 +9,12 @@
     rightMargin = room_width - leftMargin;
     playerIconWidth =  sprite_get_width(spr_Player1_Profile)*global.sizeH;
     playerIconHeight = sprite_get_height(spr_Player1_Profile)*global.sizeH;
+    spinnerTopMargin = topMargin + playerIconHeight
     
     // Slot machine
-    centerX = global.deviceWidth /2;
-    centerY = global.deviceHeight /2;
+    centerX = global.deviceWidth /2;  
+    //centerY = global.deviceHeight /2;
+    SpinnerY = (global.deviceHeight - spinnerTopMargin) / 2 + spinnerTopMargin
     
     // Players
     player1MainX =  leftMargin + playerIconWidth / 2;
@@ -31,7 +33,6 @@
     global.player[2] = objectArray[1];
     
     // Create the slot machine
-    instance_create(centerX, centerY, obj_spinner_window);
-    objectArray[3] = instance_create(centerX, centerY, obj_slot_machine);
+    objectArray[3] = instance_create(centerX, SpinnerY, obj_spinner_machine);
 }
 

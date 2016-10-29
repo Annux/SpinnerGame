@@ -3,6 +3,25 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
+  <datafiles number="1" name="datafiles">
+    <datafile>
+      <name>Epic Games Launcher.lnk</name>
+      <exists>-1</exists>
+      <size>1258</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>Epic Games Launcher.lnk</filename>
+    </datafile>
+  </datafiles>
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
@@ -13,10 +32,9 @@
       <sprites name="Spinner">
         <sprite>sprites\spr_Spinner_BG</sprite>
         <sprite>sprites\spr_Spinner_FG</sprite>
-        <sprite>sprites\spr_spinnerWindow</sprite>
+        <sprite>sprites\spr_Spinner_Frame</sprite>
         <sprites name="symbols">
           <sprite>sprites\spr_RedSpinIcon</sprite>
-          <sprite>sprites\spr_purple</sprite>
           <sprite>sprites\spr_GreenSpinIcon</sprite>
           <sprite>sprites\spr_BlueSpinIcon</sprite>
           <sprite>sprites\spr_YellowSpinIcon</sprite>
@@ -194,7 +212,7 @@
         <scripts name="other">
           <script>scripts\scr_spinner_destroy.gml</script>
           <script>scripts\scr_spinner_shift.gml</script>
-          <script>scripts\scr_spinner_DEBUGDRAW.gml</script>
+          <script>scripts\scr_spinner_draw.gml</script>
           <scripts name="Scatters">
             <script>scripts\scr_activate_neutrals.gml</script>
             <script>scripts\scr_deactivate_neutrals.gml</script>
@@ -248,9 +266,8 @@
         <object>objects\obj_player_character</object>
       </objects>
       <objects name="Spinner">
-        <object>objects\obj_slot_machine</object>
-        <object>objects\obj_spinner_window</object>
-        <object>objects\obj_slot_BG</object>
+        <object>objects\obj_spinner_machine</object>
+        <object>objects\obj_spinner_BG</object>
         <objects name="Symbols">
           <object>objects\obj_symbol_parent</object>
           <objects name="Mana">
@@ -265,19 +282,20 @@
             <object>objects\obj_scatter_parent</object>
             <object>objects\obj_swordsymbol</object>
             <object>objects\obj_shieldsymbol</object>
-            <object>objects\obj_purpleSpell</object>
-            <object>objects\obj_purplemana</object>
           </objects>
           <objects name="Neutrals">
             <object>objects\obj_neutral_parent</object>
           </objects>
         </objects>
+        <object>objects\obj_spinner_mak</object>
       </objects>
     </objects>
     <objects name="Spells">
       <object>objects\obj_lightningSource</object>
       <object>objects\obj_lightning</object>
       <object>objects\obj_bash</object>
+      <object>objects\obj_bombSpell</object>
+      <object>objects\obj_bomb</object>
     </objects>
   </objects>
   <rooms name="rooms">
