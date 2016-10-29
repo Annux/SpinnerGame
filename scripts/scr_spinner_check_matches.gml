@@ -5,19 +5,25 @@ for(var i = 0; i < numberOfRows; i++)
     // determines PLAYER 1 matches - starts from the leftmost column and multiplies results going towards the right
     if(global.turn = 1)
     {
-        Type = symbolObject[0, i].object_index
+        Type = symbolObject[0, i].state
         var value = matchValue[0];
-        if(symbolObject[1, i].object_index == Type || symbolObject[1, i].object_index == obj_wildmana) // 2 in a row
+        
+        if(symbolObject[1, i].canMatch)
         {
-            value = matchValue[1];
-            if(symbolObject[2, i].object_index == Type || symbolObject[2, i].object_index == obj_wildmana) // 3 in a row
+            if(symbolObject[1, i].state == Type || symbolObject[1, i].state == symbolState.wild) // 2 in a row
             {
-                value = matchValue[2];
-                if(symbolObject[3, i].object_index == Type || symbolObject[3, i].object_index == obj_wildmana) // 4 in a row
+                value = matchValue[1];
+                if(symbolObject[2, i].state == Type || symbolObject[2, i].state == symbolState.wild) // 3 in a row
                 {
-                    value = matchValue[3];
-                    if(symbolObject[4, i].object_index  == Type || symbolObject[4, i].object_index == obj_wildmana) // 5 in a row
-                        value = matchValue[4];
+                    value = matchValue[2];
+                    if(symbolObject[3, i].state == Type || symbolObject[3, i].state == symbolState.wild) // 4 in a row
+                    {
+                        value = matchValue[3];
+                        if(symbolObject[4, i].state  == Type || symbolObject[4, i].state == symbolState.wild) // 5 in a row
+                        {
+                            value = matchValue[4];
+                        }
+                    }
                 }
             }
         }
@@ -25,19 +31,24 @@ for(var i = 0; i < numberOfRows; i++)
     // determines PLAYER 2 matches - starts from the rightmost column and multiplies results going towards the left
     else if(global.turn = 2)
     {
-        Type = symbolObject[4, i].object_index
+        Type = symbolObject[4, i].state
         var value = matchValue[0];
-        if(symbolObject[3, i].object_index == Type || symbolObject[3, i].object_index == obj_wildmana) // 2 in a row
+        if(symbolObject[4, i].canMatch)
         {
-            value = matchValue[1];
-            if(symbolObject[2, i].object_index == Type || symbolObject[2, i].object_index == obj_wildmana) // 3 in a row
+            if(symbolObject[3, i].state == Type || symbolObject[3, i].state == symbolState.wild) // 2 in a row
             {
-                value = matchValue[2];
-                if(symbolObject[1, i].object_index == Type || symbolObject[1, i].object_index == obj_wildmana) // 4 in a row
+                value = matchValue[1];
+                if(symbolObject[2, i].state == Type || symbolObject[2, i].state == symbolState.wild) // 3 in a row
                 {
-                    value = matchValue[3];
-                    if(symbolObject[0, i].object_index  == Type || symbolObject[0, i].object_index == obj_wildmana) // 5 in a row
-                        value = matchValue[4];
+                    value = matchValue[2];
+                    if(symbolObject[1, i].state == Type || symbolObject[1, i].state == symbolState.wild) // 4 in a row
+                    {
+                        value = matchValue[3];
+                        if(symbolObject[0, i].state  == Type || symbolObject[0, i].state == symbolState.wild) // 5 in a row
+                        {
+                            value = matchValue[4];
+                        }
+                    }
                 }
             }
         }
@@ -45,22 +56,22 @@ for(var i = 0; i < numberOfRows; i++)
     // Awards player 1 or 2 based on the outcome of the matches
     switch(Type)
     {
-        case (obj_purplemana):
+        case (symbolState.purple):
             show_debug_message("+" + string(value) + " purples");
             global.manaBar[global.turn,manaType.purple].curMana += value;
             //global.player[global.turn].curMana[manaType.purple] += value;
             break;
-        case (obj_greenmana):
+        case (symbolState.green):
             show_debug_message("+" + string(value) + " greens");
             global.manaBar[global.turn,manaType.green].curMana += value;
             //global.player[global.turn].curMana[manaType.green] += value;
             break;
-        case (obj_redmana):
+        case (symbolState.red):
             show_debug_message("+" + string(value) + " reds");
             global.manaBar[global.turn,manaType.red].curMana += value;
             //global.player[global.turn].curMana[manaType.red] += value;
             break;
-        case (obj_bluemana):
+        case (symbolState.blue):
             show_debug_message("+" + string(value) + " blues");
             global.manaBar[global.turn,manaType.blue].curMana += value;
             //global.player[global.turn].curMana[manaType.blue] += value;

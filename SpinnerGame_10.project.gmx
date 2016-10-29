@@ -37,7 +37,7 @@
           <sprite>sprites\spr_RedSpinIcon</sprite>
           <sprite>sprites\spr_GreenSpinIcon</sprite>
           <sprite>sprites\spr_BlueSpinIcon</sprite>
-          <sprite>sprites\spr_YellowSpinIcon</sprite>
+          <sprite>sprites\spr_PurpleSpinIcon</sprite>
           <sprite>sprites\spr_WildSpinIcon</sprite>
           <sprite>sprites\spr_ShieldSpinIcon</sprite>
           <sprite>sprites\spr_BombSpinIcon</sprite>
@@ -229,6 +229,13 @@
           </scripts>
         </scripts>
       </scripts>
+      <scripts name="Symbols">
+        <script>scripts\scr_symbol_create_new_symbol.gml</script>
+        <script>scripts\scr_symbol_move_into_spinner.gml</script>
+        <script>scripts\scr_symbol_move_out_of_spinner.gml</script>
+        <script>scripts\scr_symbol_get_state_information.gml</script>
+        <script>scripts\scr_symbol_change_state.gml</script>
+      </scripts>
       <script>scripts\scr_switch_turns.gml</script>
     </scripts>
   </scripts>
@@ -269,22 +276,25 @@
         <object>objects\obj_spinner_machine</object>
         <object>objects\obj_spinner_BG</object>
         <objects name="Symbols">
-          <object>objects\obj_symbol_parent</object>
-          <objects name="Mana">
-            <object>objects\obj_wildmana</object>
-            <object>objects\obj_greenmana</object>
-            <object>objects\obj_bluemana</object>
-            <object>objects\obj_purplemana</object>
-            <object>objects\obj_redmana</object>
-            <object>objects\obj_mana_parent</object>
-          </objects>
-          <objects name="Scatters">
-            <object>objects\obj_scatter_parent</object>
-            <object>objects\obj_swordsymbol</object>
-            <object>objects\obj_shieldsymbol</object>
-          </objects>
-          <objects name="Neutrals">
-            <object>objects\obj_neutral_parent</object>
+          <object>objects\obj_symbol</object>
+          <objects name="Old">
+            <object>objects\obj_symbol_parent</object>
+            <objects name="Mana">
+              <object>objects\obj_wildmana</object>
+              <object>objects\obj_greenmana</object>
+              <object>objects\obj_bluemana</object>
+              <object>objects\obj_purplemana</object>
+              <object>objects\obj_redmana</object>
+              <object>objects\obj_mana_parent</object>
+            </objects>
+            <objects name="Scatters">
+              <object>objects\obj_scatter_parent</object>
+              <object>objects\obj_swordsymbol</object>
+              <object>objects\obj_shieldsymbol</object>
+            </objects>
+            <objects name="Neutrals">
+              <object>objects\obj_neutral_parent</object>
+            </objects>
           </objects>
         </objects>
         <object>objects\obj_spinner_mak</object>
