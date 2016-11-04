@@ -1,13 +1,13 @@
-/// creates the banner, which manages the players spells
 {
-    if(object_index = obj_banner_blue)
+    if(instance_number(object_index) <= 1)
     {
         playerNumber = 1;
+        buttonObject = obj_player_spell_button;
     }
     else
     {
         playerNumber = 2;
-        show_debug_message("I am player 2!");
+        buttonObject = obj_enemy_spell_button;
     }
 
     // CREATE spellButton[] array
@@ -17,8 +17,7 @@
     
     for(var i = 0; i < global.numSpellButtons; i++)
     {
-        spellButton[i] = instance_create(x, topMargin + (buttonSpacing * i), obj_spell_button);
+        spellButton[i] = instance_create(x, topMargin + (buttonSpacing * i), buttonObject);
         global.spellButton[playerNumber, i] = spellButton[i];
-        show_debug_message("player " + string(playerNumber) + " button " + string(i));
     }
 }

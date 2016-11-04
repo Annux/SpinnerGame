@@ -1,26 +1,27 @@
-// The Player creates a heirarchy of objects which all store references of their children and can be referenced in the following ways
-// player
-// -> myChar (the player character portrait)
-// -> myHUD (the health & mana bar frame)
-//      -> myHUD.healthBar
-//      -> myHUD.manaBar[1, 2, 3, 4]
-// -> myBanner (the banner that hangs below the player icon)
-//      -> myBanner.spellButton[1, 2, 3, 4]
-
 {
-
-    myChar = instance_create(x, y, obj_player_character);
-
+    // CREATE myHUD & myBanner //
     hudX = x + (sprite_width / 3)
     bannerY = y + (sprite_height / 4)
     
     myHUD = instance_create(hudX, y, obj_HUD);
     global.HUD[1] = myHUD;
-
+    
     myBanner = instance_create(x, bannerY, obj_banner_blue);
     global.banner[1] = myBanner;
-
-    //////////////////////    
+    
+    myChar = instance_create(x, y, obj_player_character);
+    //////////////////////
+    
+    // BASE STATS //
+    playerNumber = 1;
+    myHUD.healthBar.maxHP = 100;
+    myHUD.healthBar.curHP = 100;
+    for(var n = 0; n < global.numManaBars; n++)
+    {
+        myHUD.manaBar[n].curMana = 20;
+        myHUD.manaBar[n].maxMana = 40;
+    }
+    
     // CLASS SETUP //
     switch(global.playerClass)
     {
@@ -38,12 +39,5 @@
             break;
     }
     
-    //////////////////////
-    // BASE STATS //
-    playerNumber = 1;
-    myHUD.healthBar.curHP = myHUD.healthBar.maxHP;
-    for(var n = 0; n < global.numManaBars; n++)
-    {
-        myHUD.manaBar[n].maxMana = 50;
-    }
+    TakeDamage = 0; // placeholder. This is poor terminology but basically updating this value causes the HUD to be updated, so setting it to 0 refreshes the hud without changing it
 }

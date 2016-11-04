@@ -1,12 +1,21 @@
-// if you press this button, highlight it
-if(position_meeting(mouse_x,mouse_y,self) && buttonEnabled)
+if(buttonPressed)
 {
-    buttonSelected = true
-    image_index = imgSelect
-}
-// otherwise if you press somewhere else, unhighlight it
-else if(canBeActivated)
-{
-    buttonActivated = false;
-    image_index = imgNormal
+    if(isSpellButton)
+    {
+        script_execute(spellScript); // run the spell-specific script
+        
+        // deduct the mana cost from their mana pool
+        for(var i = 0; i < global.manaTypes; i++)
+        {
+            global.player[global.turn].curMana[i] -= spellCost[i];
+        }
+        
+        // press the button
+        buttonPressed = false;
+        global.actionsRemaining -= 1;
+        if(global.actionsRemaining <= 0)
+        {
+            scr_switch_turns(global.turn);
+        }
+    }
 }

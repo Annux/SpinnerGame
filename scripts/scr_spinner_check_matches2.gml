@@ -115,3 +115,9 @@ show_debug_message("there are " + string(num) + " shields");
 // resets the slot machine for the next spin
 curStoppingColumn = -1;
 slotState = 0;
+
+// switches turns if the player is out of actions
+if(global.actionsRemaining = 0)
+{
+    scr_switch_turns(global.turn);
+}

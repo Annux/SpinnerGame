@@ -82,6 +82,12 @@ for(var i = 0; i < numberOfRows; i++)
 // resets the slot machine for the next spin
 slotState = 0;
 
+// switches turns if the player is out of actions
+if(global.actionsRemaining = 0)
+{
+    scr_switch_turns(global.turn);
+}
+
 if(global.turn == 1)
     curStoppingColumn = -1;
 else if(global.turn == 2)

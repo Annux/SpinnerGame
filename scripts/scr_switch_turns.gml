@@ -1,7 +1,8 @@
 // Controls turn swapping from the player to the enemy
+curTurn = argument0;
 show_debug_message("CHANGING TURNS")
 
-switch(global.turn)
+switch(curTurn)
 {
     case (1):
         show_debug_message("PLAYER 2's TURN")

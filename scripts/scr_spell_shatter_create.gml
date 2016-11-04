@@ -1,6 +1,5 @@
 spellName = "Shatter";
 spellScript = asset_get_index("scr_spell_shatter");
-spellIcon = spr_shatter
 
 for(var i = 0; i < global.manaTypes; i++)
 {

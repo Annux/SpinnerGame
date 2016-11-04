@@ -1,10 +1,28 @@
 if(global.turn == 1)
 {
-    scr_unit_takedamage(global.player[1], -25);
+    if (global.healthBar[1].curHealth + 10 <= global.player[1].maxHP) //Add only if health isn't max
+    {
+        global.player[1].curHP += 10;
+        global.healthBar[1].curHealth += 10;
+    }
+    else //If you add more than max Health, keep at max health
+    {
+        global.player[1].curHP = global.player[1].maxHP;
+        global.healthBar[1].curHealth = global.player[1].maxHP;
+    }
 }
 else if(global.turn == 2)
 {
-    scr_unit_takedamage(global.player[2], -25);
+    if (global.healthBar[2].curHealth + 10 <= global.player[1].maxHP) //Add only if health isn't max
+    {
+        global.player[2].curHP += 10;
+        global.healthBar[2].curHealth += 10;
+    }
+    else //If you add more than max Health, keep at max health
+    {
+        global.player[2].curHP = global.player[1].maxHP;
+        global.healthBar[2].curHealth = global.player[1].maxHP;
+    }
 }
 
 /*/Dear Dustin,
@@ -13,6 +31,4 @@ else if(global.turn == 2)
                 
 /*/Dear Snow,
     I changed this script BROAH
-    I like the way the / * / looks
-    Good idea.
                 MUCH love, Doostin/*/

@@ -26,13 +26,9 @@
     global.spellFirePosY = playerMainY;     // placeholder
 
 // CREATING SCENE OBJECTS, ADDING THEM TO ARRAY //
-    // Create game manager
-    instance_create(0, 0, obj_game_manager);
-
     // Create the characters
     objectArray[0] = instance_create(player1MainX, playerMainY, obj_player);
     global.player[1] = objectArray[0];
-    
     objectArray[1] = instance_create(player2MainX, playerMainY, obj_enemy);
     global.player[2] = objectArray[1];
     
