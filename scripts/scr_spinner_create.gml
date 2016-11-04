@@ -9,6 +9,16 @@ show_debug_message("Creating the spinner");
 var middleColumn = numberOfColumns/2 + .5
 var middleRow = numberOfRows/2 + .5
 
+enum symbolState
+    {
+    blue,
+    red,
+    green,
+    purple,
+    wild,
+    test
+    }
+
 for(var i = 0; i < numberOfColumns; i++)
 {
     colPos[i] = columnCenter + columnSeperation*(i+1 - middleColumn); // establishes the column position based on the center column position
@@ -23,15 +33,24 @@ for(var i = 0; i < numberOfColumns; i++)
     // Create all the mana symbols (NOTE this method assumes there is initially an equal amount of each types of mana)
     for(var n = 0; n < manaPerColumn; n++)
     {
-        ds_list_add(spinnerList[i],obj_redmana,obj_bluemana,obj_greenmana,obj_purplemana);
+        var bl = scr_symbol_create_new_symbol(symbolState.blue)
+        var rd = scr_symbol_create_new_symbol(symbolState.red)
+        var gr = scr_symbol_create_new_symbol(symbolState.green)
+        var pr = scr_symbol_create_new_symbol(symbolState.purple)
+        
+        ds_list_add(spinnerList[i],bl,rd,gr,pr);
     }
 
     // Create all the wild symbols in all middle columns (wilds do not appear in row 0 or the last row because starting a chain on a wild is OP opie)
     if(i < numberOfColumns - 1 && i > 0)
     {
+            
+    
         for(var n = 0; n < wildsPerColumn; n++)
         {
-            ds_list_add(spinnerList[i],obj_wildmana);
+            var wl = scr_symbol_create_new_symbol(symbolState.wild)
+            
+            ds_list_add(spinnerList[i],wl);
         }
     }
     ds_list_shuffle(spinnerList[i]);
@@ -64,7 +83,7 @@ for(var i = 0; i < numberOfColumns; i++)
         }
         // create a symbol object for every row position
         var lastStockItem = ds_list_find_value(symbolStockList[i], ds_list_size(symbolStockList[i])-1); // retrieve the last item in stock
-        symbolObject[i, j] = instance_create(colPos[i], rowPos[j], lastStockItem);                      // drop it into the top spot of the column
+        symbolObject[i, j] = scr_symbol_move_into_spinner(colPos[i], rowPos[j], lastStockItem);                      // drop it into the top spot of the column
         ds_list_delete(symbolStockList[i], ds_list_size(symbolStockList[i])-1);                         // remove it from the list
     }
     botVisLimit = rowPos[0] + rowSeperation;

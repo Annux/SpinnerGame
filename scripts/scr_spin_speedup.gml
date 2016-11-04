@@ -14,3 +14,4 @@ for(var j = 0; j < symbolsPerColumn; j++)
         symbolObject[i, j].vspeed = maxSpinSpeed;
     }
 }
+

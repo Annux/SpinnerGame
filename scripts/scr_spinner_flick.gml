@@ -25,6 +25,7 @@ else if(!grabbedSpinner && !inPosition) // reset the slots if the player lets go
 // while the player is holding/dragging the spinner
 if(grabbedSpinner)
 {
+    show_debug_message("Grabbed")
     if (mouse_y + yOffset < topLimit) // if they drag too far up, reset to middle
         || (mouse_check_button_released(mb_left)) // if they let go, reset to middle
     {
