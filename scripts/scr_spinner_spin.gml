@@ -29,8 +29,16 @@ for(var i = 0; i < numberOfColumns; i++)
             scr_spin_end(i);
             break;
         case 4:
+        
+            for(var j = 0; j < numberOfRows; j++)
+                    {
+                    var symbol = symbolObject[i,j];
+                    scr_symbol_stop_on_screen_activate(symbol); 
+                    }     
+        
             if(i == numberOfColumns - 1)
-            {
+            {   
+                    
                 scr_spinner_check_matches();
             }
             break;

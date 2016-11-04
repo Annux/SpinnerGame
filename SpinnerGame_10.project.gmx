@@ -42,6 +42,10 @@
           <sprite>sprites\spr_ShieldSpinIcon</sprite>
           <sprite>sprites\spr_BombSpinIcon</sprite>
           <sprite>sprites\spr_DamageSpinIcon</sprite>
+          <sprites name="status effects">
+            <sprite>sprites\spr_status_null</sprite>
+            <sprite>sprites\spr_status_smoke</sprite>
+          </sprites>
         </sprites>
         <sprites name="Statusbar">
           <sprite>sprites\spr_statusbar</sprite>
@@ -235,7 +239,25 @@
         <script>scripts\scr_symbol_create_new_symbol.gml</script>
         <script>scripts\scr_symbol_move_out_of_spinner.gml</script>
         <script>scripts\scr_symbol_move_into_spinner.gml</script>
+        <script>scripts\scr_symbol_change_status_effect.gml</script>
         <script>scripts\scr_symbol_get_state_information.gml</script>
+        <script>scripts\scr_symbol_draw.gml</script>
+        <scripts name="Matching">
+          <scripts name="Mana">
+            <script>scripts\scr_symbol_match_red_mana.gml</script>
+            <script>scripts\scr_symbol_match_green_mana.gml</script>
+            <script>scripts\scr_symbol_match_blue_mana.gml</script>
+            <script>scripts\scr_symbol_match_purple_mana.gml</script>
+          </scripts>
+        </scripts>
+        <scripts name="Stop on screen">
+          <script>scripts\scr_symbol_stop_on_screen_null.gml</script>
+          <script>scripts\scr_symbol_stop_on_screen_smoke.gml</script>
+        </scripts>
+        <scripts name="status effect">
+          <script>scripts\scr_symbol_get_status_effect_info.gml</script>
+          <script>scripts\scr_symbol_stop_on_screen_activate.gml</script>
+        </scripts>
       </scripts>
     </scripts>
   </scripts>

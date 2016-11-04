@@ -18,6 +18,12 @@ enum symbolState
     wild,
     test
     }
+    
+enum symbol_status_effect
+    {
+    normal,
+    smoke
+    }
 
 for(var i = 0; i < numberOfColumns; i++)
 {
