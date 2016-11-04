@@ -36,7 +36,7 @@
         <sprites name="symbols">
           <sprite>sprites\spr_RedSpinIcon</sprite>
           <sprite>sprites\spr_GreenSpinIcon</sprite>
-          <sprite>sprites\spr_PuurpleSpinIcon</sprite>
+          <sprite>sprites\spr_PurpleSpinIcon</sprite>
           <sprite>sprites\spr_BlueSpinIcon</sprite>
           <sprite>sprites\spr_WildSpinIcon</sprite>
           <sprite>sprites\spr_ShieldSpinIcon</sprite>
@@ -94,7 +94,6 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\scr_Global_Variables.gml</script>
     <scripts name="Orientation Manager">
       <script>scripts\scr_rescale.gml</script>
       <script>scripts\scr_rescaleH.gml</script>
@@ -143,6 +142,7 @@
             <script>scripts\scr_spell_button_create.gml</script>
             <script>scripts\scr_spell_button_initialize.gml</script>
             <script>scripts\scr_spell_button_released.gml</script>
+            <script>scripts\scr_spell_button_pressed.gml</script>
             <script>scripts\scr_spell_button_draw.gml</script>
           </scripts>
         </scripts>
@@ -166,6 +166,7 @@
           <script>scripts\scr_spinner_reset.gml</script>
           <script>scripts\scr_spinner_move.gml</script>
           <script>scripts\scr_spinner_step.gml</script>
+          <script>scripts\scr_spinner_begin_spinning.gml</script>
         </scripts>
         <scripts name="state 1(moving)">
           <script>scripts\scr_spinner_spin.gml</script>
@@ -183,16 +184,6 @@
           <scripts name="Scatters">
             <script>scripts\scr_activate_neutrals.gml</script>
             <script>scripts\scr_deactivate_neutrals.gml</script>
-          </scripts>
-          <scripts name="Old">
-            <script>scripts\scr_spinner_check_matches2.gml</script>
-            <script>scripts\scr_spin_end2.gml</script>
-            <script>scripts\scr_spin_jigglestop2.gml</script>
-            <script>scripts\scr_spin_slowdown2.gml</script>
-            <script>scripts\scr_spin_speedup2.gml</script>
-            <script>scripts\scr_spinner_alarm2.gml</script>
-            <script>scripts\scr_spinner_move2.gml</script>
-            <script>scripts\scr_spinner_create2.gml</script>
           </scripts>
         </scripts>
       </scripts>
@@ -235,8 +226,9 @@
         <script>scripts\scr_null.gml</script>
       </scripts>
       <scripts name="Game Manager">
-        <script>scripts\scr_game_step.gml</script>
         <script>scripts\scr_game_switch_turns.gml</script>
+        <script>scripts\scr_deduct_action.gml</script>
+        <script>scripts\scr_Global_Variables.gml</script>
       </scripts>
       <scripts name="Symbols">
         <script>scripts\scr_symbol_change_state.gml</script>

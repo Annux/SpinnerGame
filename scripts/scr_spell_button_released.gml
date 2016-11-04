@@ -1,12 +1,12 @@
 /// activate the spell effects of the button, assuming it's clickable
 // the first portion of this script is debug until 'click and drag' becomes the actual activator for spells
 // Debug - Debug - Debug //
-if(buttonActivated)
+if(buttonActivated && global.actionsEnabled)
 {
     image_index = imgNormal
     buttonActivated = false;
-    buttonSelected = false;
 // Debug - Debug - Debug //
+    global.actionsEnabled = false; // deactivate action use until this action has been completed
     
     script_execute(spellScript); // run the spell-specific script
     // deduct the mana cost from the player's mana pool
@@ -14,5 +14,9 @@ if(buttonActivated)
     {
         global.manaBar[global.turn, i].curMana -= spellCost[i];
     }
-    global.actionsRemaining -= 1;
+}
+else if(!global.actionsEnabled)
+{
+    buttonActivated = false;
+    image_index = imgNormal;
 }

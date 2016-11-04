@@ -68,7 +68,6 @@ for(var i = 0; i < numberOfColumns; i++)
 ///////////////////////////////// 
 
     reserveList[i]= ds_list_create();  
-     
          
 ///5////////////////////////////////////////////////////////
 // ----------------- ROWS & POSITIONS ------------------ //
@@ -107,7 +106,7 @@ for(var i = 0; i < numberOfColumns; i++)
 {
     for(var j = 0; j < numberOfRows; j++)
     {
-        scr_spinner_move2(i, j)       // do the initial slot clear
+        scr_spinner_move(i, j)       // do the initial slot clear
         //neutralPosition[i, j] = true; // variable which stores whether or not a position is available (so 2 neutrals don't spawn in the same place)
     }
 }

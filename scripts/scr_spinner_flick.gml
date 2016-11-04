@@ -44,20 +44,12 @@ if(grabbedSpinner)
             }
         }
     }
+////////////////////////////////////
+// BEGINNING THE 'SPINNING' STATE //
+////////////////////////////////////
     // if they drag too far down, begin the spin
     else if (mouse_y + yOffset > bottomLimit)
     {
-        slotState = 1; // SLOT STATE 1 - SPINNING //
-        for(var i = 0; i < numberOfColumns; i++)
-        {
-            colState[i] = 0;
-            for(var j = 0; j < symbolsPerColumn; j++)
-            {
-                symbolObject[i, j].vspeed = initSpinSpeed;
-            }
-        }
-        alarm[0] = spinDuration*room_speed;  // ALARM FOR SLOT STATE 2 - STOPPING//
-        grabbedSpinner = false;
-        global.actionsRemaining -= 1;
+        scr_spinner_begin_spinning();
     }
 }

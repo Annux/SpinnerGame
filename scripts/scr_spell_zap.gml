@@ -4,6 +4,7 @@ if(global.turn == 1)
     var lightningSource = instance_create(global.spellFirePosX[1]+100, global.spellFirePosY, obj_lightningSource);
     var lightning = instance_create(global.spellFirePosX[1], global.spellFirePosY, obj_lightning);
     lightning.finalTargetX = global.spellFirePosX[2];
+    scr_deduct_action();
 }
 else if(global.turn == 2)
 {
@@ -11,6 +12,7 @@ else if(global.turn == 2)
     var lightningSource = instance_create(global.spellFirePosX[2]-100, global.spellFirePosY, obj_lightningSource);
     var lightning = instance_create(global.spellFirePosX[2], global.spellFirePosY, obj_lightning);
     lightning.finalTargetX = global.spellFirePosX[1];
+    scr_deduct_action();
 }
 lightning.finalTargetY = global.spellFirePosY;
 lightning.duration = spellEffectDur;

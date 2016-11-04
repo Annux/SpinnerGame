@@ -17,10 +17,11 @@ with(instance_find(obj_spinner_machine, 0))
     show_debug_message(string(bluesDestroyed));
     if(global.turn == 1)
     {
-        global.player[2].TakeDamage = 10*bluesDestroyed;
+        scr_unit_takedamage(global.player[2], 10*bluesDestroyed);
     }
     else if(global.turn == 2)
     {
-        global.player[1].TakeDamage = 10*bluesDestroyed;
+        scr_unit_takedamage(global.player[1], 10*bluesDestroyed);
     }
+    scr_deduct_action();
 }

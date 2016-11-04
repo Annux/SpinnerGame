@@ -81,12 +81,7 @@ for(var i = 0; i < numberOfRows; i++)
 
 // resets the slot machine for the next spin
 slotState = 0;
-
-if(global.turn == 1)
-    curStoppingColumn = -1;
-else if(global.turn == 2)
-    curStoppingColumn = 5;
-
+scr_deduct_action();
 
 /*
 // NEUTRALS -Assign the neutrals to their new slot positions

@@ -21,6 +21,7 @@ if(symbolObject[i, j].y > bottomMostLimit && slotState = 1)
     var offset = symbolObject[i, j].y - bottomMostLimit;
     scr_spinner_shift(symbolObject[i, j], i, j, offset);
 }
+
 /*
 ////// GROWING & SHRINKING //////
 /////////////////////////////////

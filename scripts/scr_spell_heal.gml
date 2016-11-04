@@ -6,6 +6,7 @@ else if(global.turn == 2)
 {
     scr_unit_takedamage(global.player[2], -25);
 }
+scr_deduct_action();
 
 /*/Dear Dustin,
     Is this what we've become?

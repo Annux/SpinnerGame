@@ -22,5 +22,3 @@ switch(global.turn)
         }
         break;
 }
-
-global.actionsRemaining = global.actionsPerTurn;

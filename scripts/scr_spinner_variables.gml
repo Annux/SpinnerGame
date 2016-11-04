@@ -76,6 +76,5 @@ topMostLimit = rowCenter; // the highest point that symbols may go relative to t
 bottomVisLimit = rowCenter; // the lowest point symbols may begin to be visible
 bottomMostLimit = rowCenter; // the lowest point that symbols may go relative to the scree
 slotState = 0;
-curSpinDecel = spinDecel;
-curStoppingColumn = -1;
+curStoppingColumn = 0; // this determines the order that the spinner stops columns (either from left to right or from right to left)
 curOffset = 0;
