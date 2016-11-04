@@ -1,4 +1,4 @@
-//WHEN: Runs during the creation of each layout controlling object, and when the orientation changes
+//WHEN: Runs upon the creation of each room
 //WHAT: Sets the position of all the objects in the room
 {
     switch(room)
@@ -12,7 +12,8 @@
         case(InGame_Screen):
             scr_InGame_Layout()
             break;
-        default: break;
+        default:
+            break;
     }
 }
 

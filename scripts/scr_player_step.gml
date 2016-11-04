@@ -12,7 +12,6 @@ for(var spellindex = 0; spellindex < global.numSpellButtons; spellindex++)
             {
                 haveEnoughMana = false;
             }
-            //global.manaBar[playerNumber, w].curMana = curMana[w];
         }
         myBanner.spellButton[spellindex].buttonEnabled = haveEnoughMana;
     }
@@ -20,10 +19,4 @@ for(var spellindex = 0; spellindex < global.numSpellButtons; spellindex++)
     {
         myBanner.spellButton[spellindex].buttonEnabled = false;
     }
-}
-
-// CHECKING HEALTH
-if(TakeDamage > 0)
-{
-    scr_unit_takedamage();
 }

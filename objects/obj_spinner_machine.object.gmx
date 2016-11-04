@@ -313,7 +313,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_scatter_spawn(obj_bomb, obj_bombSpell)
+            <string>/// debug scatterbomb spell
+scr_scatter_spawn(obj_bomb, obj_bombSpell)
 </string>
           </argument>
         </arguments>

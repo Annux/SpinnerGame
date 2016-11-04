@@ -1,3 +1,4 @@
+/// creates the HUD, which manages health & manabars
 {    
     if(instance_number(object_index) <= 1)
     {

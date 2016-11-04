@@ -10,7 +10,7 @@ else
 }
 
 curMana = 40;
-maxMana = 40;
+maxMana = 50;
 height = round(40 * global.sizeH)/2;
 width = (sprite_get_width(spr_statbars) * global.sizeH) - (13*global.sizeH)
 color = c_white;

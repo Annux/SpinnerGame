@@ -1,60 +1,15 @@
 // sprites
-normalSprite = 0;
-selectedSprite = 1;
-pressedSprite = 2;
-disabledSprite = 3;
+image_index = 0;
+image_speed = 0;
+imgNormal = 0;
+imgSelect = 1;
+imgPress  = 2;
+imgActive   = 3;
+imgDisabled = 4;
 
 // logic variabes
-image_index = 0
-image_speed = 0
-buttonActive = false
-buttonPressed = false
-buttonEnabled = true
+buttonSelected = false; // is button highlighted (currently being held down)
+buttonActivated = false; // is button 'activated' (the last thing clicked)
+buttonEnabled = true;  // is button available to click
 
-//buttonSnd = snd_button1;
-
-if(isSpellButton)
-{
-    buttonEnabled = false
-    // TODO: SET SPELLS IN PLAYER CLASS //// kinda done, needs to be different for both players (enemyClass is missing)
-
-    switch (global.playerClass)
-    {
-        case (class.acolyte):
-            spellType = spell.heal;
-            break;
-        case (class.thief):
-            spellType = spell.shatter;
-            break;
-        case (class.warrior):
-            spellType = spell.bash;
-            break;
-        case (class.wizard):   
-            spellType = spell.zap;
-            break;
-    }
-    
-    switch(spellType)
-    {
-        case (spell.bash):
-            scr_spell_bash_create();
-            break;
-        case (spell.heal):
-            scr_spell_heal_create();
-            break;
-        case (spell.shatter):
-            scr_spell_shatter_create();
-            break;
-        case (spell.manabomb):
-            scr_spell_manabomb_create();
-            break;
-        case (spell.zap):
-            scr_spell_zap_create();
-            break;
-    }
-}
-else
-{
-    spellName = "";
-}
-
+canBeActivated = false; // if true, this button will remain highlighted so long as it was the last thing tapped

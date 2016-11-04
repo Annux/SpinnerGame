@@ -1,4 +1,4 @@
-with(instance_find(obj_slot_machine, 0))
+with(instance_find(obj_spinner_machine, 0))
 {
     var bluesDestroyed = 0;
     inPosition = false
