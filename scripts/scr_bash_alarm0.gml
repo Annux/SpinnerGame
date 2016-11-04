@@ -1,4 +1,10 @@
-global.healthBar[1].curHealth = global.player[1].curHP;
-global.healthBar[2].curHealth = global.player[2].curHP;
+if(global.turn == 1)
+{
+    scr_unit_takedamage(global.player[2], damageVal);
+}
+else if(global.turn == 2)
+{
+    scr_unit_takedamage(global.player[1], damageVal);
+}
 
 instance_destroy();

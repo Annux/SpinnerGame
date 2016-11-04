@@ -36,8 +36,8 @@
         <sprites name="symbols">
           <sprite>sprites\spr_RedSpinIcon</sprite>
           <sprite>sprites\spr_GreenSpinIcon</sprite>
+          <sprite>sprites\spr_PuurpleSpinIcon</sprite>
           <sprite>sprites\spr_BlueSpinIcon</sprite>
-          <sprite>sprites\spr_YellowSpinIcon</sprite>
           <sprite>sprites\spr_WildSpinIcon</sprite>
           <sprite>sprites\spr_ShieldSpinIcon</sprite>
           <sprite>sprites\spr_BombSpinIcon</sprite>
@@ -65,11 +65,22 @@
         </sprites>
         <sprites name="spell buttons">
           <sprite>sprites\spr_spellbutton</sprite>
+          <sprite>sprites\spr_shatter</sprite>
+          <sprite>sprites\spr_bash</sprite>
+          <sprite>sprites\spr_fireball</sprite>
+          <sprite>sprites\spr_freeze</sprite>
+          <sprite>sprites\spr_zap</sprite>
+          <sprite>sprites\spr_manabomb</sprite>
+          <sprite>sprites\spr_heal</sprite>
         </sprites>
       </sprites>
       <sprites name="Characters">
         <sprites name="People">
-          <sprite>sprites\spr_Avatar_1</sprite>
+          <sprite>sprites\spr_Avatar</sprite>
+          <sprite>sprites\spr_Acolyte</sprite>
+          <sprite>sprites\spr_Wizard</sprite>
+          <sprite>sprites\spr_Warrior</sprite>
+          <sprite>sprites\spr_Thief</sprite>
           <sprite>sprites\spr_classSelect</sprite>
         </sprites>
         <sprites name="Spells">
@@ -84,41 +95,24 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_Global_Variables.gml</script>
+    <scripts name="Orientation Manager">
+      <script>scripts\scr_rescale.gml</script>
+      <script>scripts\scr_rescaleH.gml</script>
+      <script>scripts\scr_orientation_begin.gml</script>
+      <script>scripts\scr_orientation_set_views.gml</script>
+      <script>scripts\scr_orientation_set_room_layout.gml</script>
+      <scripts name="Room Layouts/Generation">
+        <script>scripts\scr_MainMenu_Layout.gml</script>
+        <script>scripts\scr_InGame_Layout.gml</script>
+      </scripts>
+    </scripts>
     <scripts name="Menu Scripts">
       <scripts name="Buttons">
         <script>scripts\scr_button_create.gml</script>
         <script>scripts\scr_button_draw.gml</script>
-        <script>scripts\scr_button_step.gml</script>
         <script>scripts\scr_button_pressed.gml</script>
+        <script>scripts\scr_button_released.gml</script>
       </scripts>
-      <scripts name="Player Classes">
-        <script>scripts\scr_warrior_create.gml</script>
-        <script>scripts\scr_wizard_create.gml</script>
-        <script>scripts\scr_thief_create.gml</script>
-        <script>scripts\scr_acolyte_create.gml</script>
-      </scripts>
-    </scripts>
-    <scripts name="Display &amp; Room Generation">
-      <scripts name="create">
-        <script>scripts\scr_Application_Begin.gml</script>
-        <script>scripts\scr_Set_Rooms.gml</script>
-        <script>scripts\UNUSEDscr_Get_Orientation.gml</script>
-      </scripts>
-      <scripts name="step">
-        <script>scripts\scr_Check_Room.gml</script>
-        <script>scripts\scr_Set_RoomUI.gml</script>
-        <script>scripts\UNUSEDscr_Check_Orientation.gml</script>
-        <script>scripts\UNUSEDscr_Check_Dimensions.gml</script>
-        <script>scripts\UNUSEDscr_Reset_Orientation.gml</script>
-        <script>scripts\UNUSEDscr_Update_Dimensions.gml</script>
-      </scripts>
-      <scripts name="Room Generation">
-        <script>scripts\scr_MainMenu_Layout.gml</script>
-        <script>scripts\scr_InGame_Layout.gml</script>
-        <script>scripts\UNUSEDscr_InGame_Layout_old.gml</script>
-      </scripts>
-      <script>scripts\scr_rescale.gml</script>
-      <script>scripts\scr_rescaleH.gml</script>
     </scripts>
     <scripts name="Game Scripts">
       <scripts name="ToolTip">
@@ -126,45 +120,14 @@
         <script>scripts\scr_create_toolTip.gml</script>
         <script>scripts\scr_delete_toolTip.gml</script>
       </scripts>
-      <scripts name="Spells">
-        <scripts name="Zap">
-          <script>scripts\scr_spell_zap_create.gml</script>
-          <script>scripts\scr_spell_zap.gml</script>
-          <scripts name="Particle Effect">
-            <script>scripts\scr_lightning_create.gml</script>
-            <script>scripts\scr_lightning_draw.gml</script>
-            <script>scripts\scr_lightning_step.gml</script>
-            <script>scripts\scr_lightningSource_alarm0.gml</script>
-            <script>scripts\scr_lightningSource_alarm1.gml</script>
-            <script>scripts\scr_lightningSource_create.gml</script>
-            <script>scripts\scr_lightning_alarm0.gml</script>
-          </scripts>
-        </scripts>
-        <scripts name="Bash">
-          <script>scripts\scr_spell_bash_create.gml</script>
-          <script>scripts\scr_spell_bash.gml</script>
-          <script>scripts\scr_bash_alarm0.gml</script>
-        </scripts>
-        <scripts name="Mana Bomb">
-          <script>scripts\scr_spell_manabomb_create.gml</script>
-          <script>scripts\scr_spell_manabomb.gml</script>
-        </scripts>
-        <scripts name="Heal">
-          <script>scripts\scr_spell_heal_create.gml</script>
-          <script>scripts\scr_spell_heal.gml</script>
-        </scripts>
-        <scripts name="Scatter">
-          <script>scripts\scr_scatter_spawn.gml</script>
-          <script>scripts\scr_scatter_create.gml</script>
-          <script>scripts\scr_scatter_step.gml</script>
-        </scripts>
-        <scripts name="Shatter">
-          <script>scripts\scr_spell_shatter_create.gml</script>
-          <script>scripts\scr_spell_shatter.gml</script>
-        </scripts>
-      </scripts>
       <scripts name="Player">
         <script>scripts\scr_player_create.gml</script>
+        <scripts name="Player Classes">
+          <script>scripts\scr_warrior_create.gml</script>
+          <script>scripts\scr_wizard_create.gml</script>
+          <script>scripts\scr_thief_create.gml</script>
+          <script>scripts\scr_acolyte_create.gml</script>
+        </scripts>
         <script>scripts\scr_player_step.gml</script>
         <script>scripts\scr_unit_takedamage.gml</script>
         <scripts name="HUD">
@@ -176,11 +139,15 @@
         </scripts>
         <scripts name="Banner">
           <script>scripts\scr_banner_create.gml</script>
-          <script>scripts\scr_spell_button_step.gml</script>
-          <script>scripts\scr_enemy_button_create.gml</script>
+          <scripts name="Spell Button">
+            <script>scripts\scr_spell_button_create.gml</script>
+            <script>scripts\scr_spell_button_initialize.gml</script>
+            <script>scripts\scr_spell_button_released.gml</script>
+            <script>scripts\scr_spell_button_draw.gml</script>
+          </scripts>
         </scripts>
       </scripts>
-      <scripts name="Enemies">
+      <scripts name="Enemy">
         <script>scripts\scr_enemy_create.gml</script>
         <scripts name="Enemy Types">
           <script>scripts\scr_rat_create.gml</script>
@@ -229,7 +196,55 @@
           </scripts>
         </scripts>
       </scripts>
-      <script>scripts\scr_switch_turns.gml</script>
+      <scripts name="Spells">
+        <scripts name="Zap">
+          <script>scripts\scr_spell_zap_create.gml</script>
+          <script>scripts\scr_spell_zap.gml</script>
+          <scripts name="Particle Effect">
+            <script>scripts\scr_lightning_create.gml</script>
+            <script>scripts\scr_lightning_draw.gml</script>
+            <script>scripts\scr_lightning_step.gml</script>
+            <script>scripts\scr_lightningSource_alarm0.gml</script>
+            <script>scripts\scr_lightningSource_alarm1.gml</script>
+            <script>scripts\scr_lightningSource_create.gml</script>
+            <script>scripts\scr_lightning_alarm0.gml</script>
+          </scripts>
+        </scripts>
+        <scripts name="Bash">
+          <script>scripts\scr_spell_bash_create.gml</script>
+          <script>scripts\scr_spell_bash.gml</script>
+          <script>scripts\scr_bash_alarm0.gml</script>
+        </scripts>
+        <scripts name="Mana Bomb">
+          <script>scripts\scr_spell_manabomb_create.gml</script>
+          <script>scripts\scr_spell_manabomb.gml</script>
+        </scripts>
+        <scripts name="Heal">
+          <script>scripts\scr_spell_heal_create.gml</script>
+          <script>scripts\scr_spell_heal.gml</script>
+        </scripts>
+        <scripts name="Scatter">
+          <script>scripts\scr_scatter_spawn.gml</script>
+          <script>scripts\scr_scatter_create.gml</script>
+          <script>scripts\scr_scatter_step.gml</script>
+        </scripts>
+        <scripts name="Shatter">
+          <script>scripts\scr_spell_shatter_create.gml</script>
+          <script>scripts\scr_spell_shatter.gml</script>
+        </scripts>
+        <script>scripts\scr_null.gml</script>
+      </scripts>
+      <scripts name="Game Manager">
+        <script>scripts\scr_game_step.gml</script>
+        <script>scripts\scr_game_switch_turns.gml</script>
+      </scripts>
+      <scripts name="Symbols">
+        <script>scripts\scr_symbol_change_state.gml</script>
+        <script>scripts\scr_symbol_create_new_symbol.gml</script>
+        <script>scripts\scr_symbol_move_out_of_spinner.gml</script>
+        <script>scripts\scr_symbol_move_into_spinner.gml</script>
+        <script>scripts\scr_symbol_get_state_information.gml</script>
+      </scripts>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -241,6 +256,7 @@
   <objects name="objects">
     <objects name="Managers">
       <object>objects\obj_orientation_manager</object>
+      <object>objects\obj_game_manager</object>
       <object>objects\obj_button_parent</object>
     </objects>
     <objects name="MainMenu">
@@ -251,33 +267,25 @@
       <objects name="Players">
         <object>objects\obj_enemy</object>
         <object>objects\obj_player</object>
+        <object>objects\obj_player_character</object>
         <objects name="Banners">
           <object>objects\obj_banner_parent</object>
           <object>objects\obj_banner_blue</object>
           <object>objects\obj_banner_red</object>
-          <object>objects\obj_enemy_spell_button</object>
-          <object>objects\obj_player_spell_button</object>
+          <object>objects\obj_spell_button</object>
         </objects>
         <objects name="HUD">
           <object>objects\obj_HUD</object>
           <object>objects\obj_health_bar</object>
           <object>objects\obj_mana_bar</object>
         </objects>
-        <object>objects\obj_player_character</object>
       </objects>
       <objects name="Spinner">
         <object>objects\obj_spinner_machine</object>
         <object>objects\obj_spinner_BG</object>
         <objects name="Symbols">
+          <object>objects\obj_symbol</object>
           <object>objects\obj_symbol_parent</object>
-          <objects name="Mana">
-            <object>objects\obj_wildmana</object>
-            <object>objects\obj_greenmana</object>
-            <object>objects\obj_bluemana</object>
-            <object>objects\obj_purplemana</object>
-            <object>objects\obj_redmana</object>
-            <object>objects\obj_mana_parent</object>
-          </objects>
           <objects name="Scatters">
             <object>objects\obj_scatter_parent</object>
             <object>objects\obj_swordsymbol</object>
@@ -287,7 +295,6 @@
             <object>objects\obj_neutral_parent</object>
           </objects>
         </objects>
-        <object>objects\obj_spinner_mak</object>
       </objects>
     </objects>
     <objects name="Spells">
