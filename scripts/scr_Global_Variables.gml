@@ -16,7 +16,7 @@ actionsRemaining = global.actionsPerTurn
 global.actionsEnabled = true;
 
 enum class {warrior, wizard, thief, acolyte};
-global.playerClass = class.acolyte // the class the player chooses. Starts as acolyte as default
+//global.playerClass = class.acolyte // the class the player chooses. Starts as acolyte as default
 
 enum spell {swordstrike, bash, shield, shatter, zap, heal, fireball, freeze, manabomb};
 

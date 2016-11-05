@@ -51,7 +51,7 @@
           <sprite>sprites\spr_statusbar</sprite>
         </sprites>
         <sprites name="Turnbar">
-          <sprite>sprites\spr_coin</sprite>
+          <sprite>sprites\spr_actioncoin</sprite>
         </sprites>
       </sprites>
       <sprites name="Player">
@@ -309,6 +309,7 @@
             <object>objects\obj_neutral_parent</object>
           </objects>
         </objects>
+        <object>objects\obj_actioncoin</object>
       </objects>
     </objects>
     <objects name="Spells">

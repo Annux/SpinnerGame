@@ -2,6 +2,7 @@ show_debug_message("///NEXT SPIN///");
 // gets the slot machine results and awards the spinning player accordingly.
 for(var i = 0; i < numberOfRows; i++)
 {
+    vspeed = 0;
     // determines PLAYER 1 matches - starts from the leftmost column and multiplies results going towards the right
     var matched = false;
     if(global.turn = 1)

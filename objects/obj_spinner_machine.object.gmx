@@ -11,41 +11,46 @@
     <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
-        <id>601</id>
-        <kind>0</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_execute_script</functionname>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>9</kind>
-            <script>scr_rescaleH</script>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
+            <kind>1</kind>
+            <string>/// custom rescaling
+{
+    padding = 20*global.sizeH;
+    leftSlotBound = global.player[1].myBanner.x + global.player[1].myBanner.sprite_xoffset + padding;
+    rightSlotBound = global.player[2].myBanner.x - global.player[2].myBanner.sprite_xoffset - padding;
+    topSlotBound = global.player[1].y + sprite_get_height(spr_statbars)*global.sizeH / 2;
+    botSlotBound = global.deviceHeight - 50*global.sizeH;
+    desiredWidth = rightSlotBound - leftSlotBound;
+    desiredHeight = botSlotBound - topSlotBound;
+    
+    if(desiredHeight &gt; desiredWidth)
+    {
+        image_xscale = desiredWidth/sprite_width;
+        image_yscale = desiredWidth/sprite_width;
+    }
+    else
+    {
+        image_xscale = desiredHeight/sprite_height;
+        image_yscale = desiredHeight/sprite_height;
+    }
+    
+    actionPosX = x + (505 - 551);
+    actionPosY = y + (790 - 417);
+    instance_create(actionPosX, actionPosY, obj_actioncoin);
+}
+</string>
           </argument>
         </arguments>
       </action>
