@@ -18,7 +18,7 @@ global.actionsEnabled = true;
 enum class {warrior, wizard, thief, acolyte};
 global.playerClass = class.acolyte // the class the player chooses. Starts as acolyte as default
 
-enum spell {swordstrike, bash, shield, shatter, zap, heal, fireball, freeze, manabomb};
+enum spell {swordstrike, bash, shield, shatter, zap, heal, fireball, freeze, manabomb, smoke_bomb};
 
 global.mana_gain[0] = 1;
 global.mana_gain[1] = 2;

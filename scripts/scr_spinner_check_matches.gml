@@ -13,16 +13,16 @@ for(var i = 0; i < numberOfRows; i++)
         Type = symbolObject[0, i].state
         var value = 0;
 
-        if((symbolObject[1, i].state == Type && symbolObject[1, i].canMatch) || symbolObject[1, i].state == symbolState.wild) // 2 in a row
+        if((symbolObject[1, i].state == Type  || symbolObject[1, i].state == symbolState.wild) && symbolObject[1, i].canMatch ) // 2 in a row
             {
                 value = 1;
-                if((symbolObject[2, i].state == Type && symbolObject[2, i].canMatch) || symbolObject[2, i].state == symbolState.wild) // 3 in a row
+                if((symbolObject[2, i].state == Type  || symbolObject[2, i].state == symbolState.wild) && symbolObject[2, i].canMatch) // 3 in a row
                 {
                     value = 2;
-                    if((symbolObject[3, i].state == Type && symbolObject[3, i].canMatch) || symbolObject[3, i].state == symbolState.wild) // 4 in a row
+                    if((symbolObject[3, i].state == Type || symbolObject[3, i].state == symbolState.wild)&& symbolObject[3, i].canMatch) // 4 in a row
                     {
                         value = 3;
-                        if((symbolObject[4, i].state  == Type && symbolObject[4, i].canMatch )|| symbolObject[4, i].state == symbolState.wild) // 5 in a row
+                        if((symbolObject[4, i].state  == Type || symbolObject[4, i].state == symbolState.wild)&& symbolObject[4, i].canMatch ) // 5 in a row
                         {
                             value = 4;
                         }
@@ -42,16 +42,16 @@ for(var i = 0; i < numberOfRows; i++)
         Type = symbolObject[4, i].state
         var value = 0;
 
-        if((symbolObject[3, i].state == Type && symbolObject[3, i].canMatch) || symbolObject[3, i].state == symbolState.wild) // 2 in a row
+        if((symbolObject[3, i].state == Type  || symbolObject[3, i].state == symbolState.wild)&& symbolObject[3, i].canMatch) // 2 in a row
             {
                 value = 1;
-                if((symbolObject[2, i].state == Type && symbolObject[2, i].canMatch ) || symbolObject[2, i].state == symbolState.wild) // 3 in a row
+                if((symbolObject[2, i].state == Type  || symbolObject[2, i].state == symbolState.wild)&& symbolObject[2, i].canMatch) // 3 in a row
                 {
                     value = 2;
-                    if((symbolObject[1, i].state == Type && symbolObject[1, i].canMatch) || symbolObject[1, i].state == symbolState.wild) // 4 in a row
+                    if((symbolObject[1, i].state == Type  || symbolObject[1, i].state == symbolState.wild)&& symbolObject[1, i].canMatch) // 4 in a row
                     {
                         value = 3;
-                        if((symbolObject[0, i].state  == Type && symbolObject[0, i].canMatch) || symbolObject[0, i].state == symbolState.wild) // 5 in a row
+                        if((symbolObject[0, i].state  == Type || symbolObject[0, i].state == symbolState.wild)&& symbolObject[0, i].canMatch) // 5 in a row
                         {
                             value = 4;
                         }

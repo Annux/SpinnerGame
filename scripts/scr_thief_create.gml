@@ -11,7 +11,7 @@ myHUD.manaBar[manaType.green].curMana  = 10;
 // Spell Setup
 mySpell[0] = spell.swordstrike
 mySpell[1] = spell.bash
-mySpell[2] = spell.shield
+mySpell[2] = spell.smoke_bomb;
 mySpell[3] = spell.shatter
 
 for(var i = 0; i < global.numSpellButtons; i++)

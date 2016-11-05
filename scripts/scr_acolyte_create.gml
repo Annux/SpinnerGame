@@ -9,7 +9,7 @@ myHUD.manaBar[manaType.red].curMana    = 15;
 myHUD.manaBar[manaType.purple].curMana = 10;
 
 // Spell Setup
-mySpell[0] = spell.swordstrike;
+mySpell[0] = spell.smoke_bomb;
 mySpell[1] = spell.bash;
 mySpell[2] = spell.shield;
 mySpell[3] = spell.shatter;

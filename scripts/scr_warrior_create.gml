@@ -9,7 +9,7 @@ myHUD.manaBar[manaType.purple].curMana = 15; // agg control
 myHUD.manaBar[manaType.blue].curMana = 10; // def control
 
 // Spell Setup
-mySpell[0] = spell.swordstrike;
+mySpell[0] = spell.smoke_bomb;
 mySpell[1] = spell.bash;
 mySpell[2] = spell.shield;
 mySpell[3] = spell.shatter;

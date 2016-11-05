@@ -23,4 +23,16 @@ if (mouse_y + yOffset > bottomLimit)
         curStoppingColumn = numberOfColumns - 1;
     grabbedSpinner = false;
     global.actionsEnabled = false;
+    
+    //activate all Symbol "on spin triggers"
+    var i = 0;
+    repeat(instance_number(obj_symbol))    
+    {
+        var obj = instance_find(obj_symbol,i)
+        with (obj)
+            {
+            scr_symbol_on_spin_activate()
+            }
+        ++i;
+    }
 }

@@ -71,6 +71,7 @@
           <sprite>sprites\spr_spellbutton</sprite>
           <sprite>sprites\spr_shatter</sprite>
           <sprite>sprites\spr_bash</sprite>
+          <sprite>sprites\sp_smoke_bomb</sprite>
           <sprite>sprites\spr_fireball</sprite>
           <sprite>sprites\spr_freeze</sprite>
           <sprite>sprites\spr_zap</sprite>
@@ -90,6 +91,8 @@
         <sprites name="Spells">
           <sprite>sprites\spr_particleLighting</sprite>
           <sprite>sprites\spr_lightingEffect</sprite>
+          <sprite>sprites\spr_smoke_bomb</sprite>
+          <sprite>sprites\spr_smoke_partical</sprite>
         </sprites>
       </sprites>
       <sprite>sprites\spr_back_button</sprite>
@@ -185,6 +188,7 @@
           <script>scripts\scr_spinner_destroy.gml</script>
           <script>scripts\scr_spinner_shift.gml</script>
           <script>scripts\scr_spinner_draw.gml</script>
+          <script>scripts\scr_return_random_symbol_on_screen.gml</script>
           <scripts name="Scatters">
             <script>scripts\scr_activate_neutrals.gml</script>
             <script>scripts\scr_deactivate_neutrals.gml</script>
@@ -227,6 +231,20 @@
           <script>scripts\scr_spell_shatter_create.gml</script>
           <script>scripts\scr_spell_shatter.gml</script>
         </scripts>
+        <scripts name="Smoke bomb">
+          <script>scripts\scr_spell_smoke_bomb_create.gml</script>
+          <script>scripts\scr_spell_smoke_bomb.gml</script>
+          <scripts name="bomb_scripts">
+            <script>scripts\scr_smoke_bomb_object_alarm_0.gml</script>
+            <script>scripts\scr_smoke_bomb_object_create.gml</script>
+            <script>scripts\scr_smoke_bomb_object_step.gml</script>
+            <scripts name="smoke_cloud_partical">
+              <script>scripts\scr_smoke_cloud_create.gml</script>
+              <script>scripts\scr_smoke_cloud_step.gml</script>
+              <script>scripts\scr_smoke_cloud_alarm_0.gml</script>
+            </scripts>
+          </scripts>
+        </scripts>
         <script>scripts\scr_null.gml</script>
       </scripts>
       <scripts name="Game Manager">
@@ -242,6 +260,7 @@
         <script>scripts\scr_symbol_change_status_effect.gml</script>
         <script>scripts\scr_symbol_get_state_information.gml</script>
         <script>scripts\scr_symbol_draw.gml</script>
+        <script>scripts\scr_symbol_on_spin_activate.gml</script>
         <scripts name="Matching">
           <scripts name="Mana">
             <script>scripts\scr_symbol_match_red_mana.gml</script>
@@ -317,6 +336,10 @@
       <object>objects\obj_bash</object>
       <object>objects\obj_bombSpell</object>
       <object>objects\obj_bomb</object>
+      <object>objects\obj_smoke_bomb</object>
+      <objects name="particals">
+        <object>objects\obj_smoke_cloud_partical</object>
+      </objects>
     </objects>
   </objects>
   <rooms name="rooms">

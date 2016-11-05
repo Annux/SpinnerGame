@@ -4,5 +4,7 @@ draw_self()
 
 if (show_status)
     {
-    draw_sprite(status_effect_sprite,image_index,x,y)
+    draw_sprite(status_effect_sprite,random(sprite_get_number(status_effect_sprite)),x,y)
     }
+    
+
