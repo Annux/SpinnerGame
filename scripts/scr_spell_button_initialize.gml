@@ -25,6 +25,9 @@ with(buttonInstance)
         case (spell.heal):
             scr_spell_heal_create();
             break;
+        case (spell.smoke_bomb):
+            scr_spell_smoke_bomb_create();
+            break;
         case (spell.fireball):
             //scr_spell_fireball_create();
             break;

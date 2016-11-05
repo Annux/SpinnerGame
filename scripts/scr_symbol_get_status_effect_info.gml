@@ -8,7 +8,7 @@ switch (status)
         {
         show_status = false;
         status_effect_sprite = spr_status_null;
-        status_stop_on_screen = scr_symbol_stop_on_screen_null;
+        status_stop_on_screen = scr_symbol_stop_on_screen_null;     
         }
     break;
     
