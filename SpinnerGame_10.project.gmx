@@ -278,6 +278,10 @@
           <script>scripts\scr_symbol_stop_on_screen_activate.gml</script>
         </scripts>
       </scripts>
+      <scripts name="DragAndDrop">
+        <script>scripts\scr_dragAndDrop.gml</script>
+        <script>scripts\scr_dragAndDropCreate_example.gml</script>
+      </scripts>
     </scripts>
   </scripts>
   <fonts name="fonts">
