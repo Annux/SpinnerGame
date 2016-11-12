@@ -21,8 +21,10 @@ if(global.turn = 1)
 // The first column to stop for P2 is the rightmost column
 else
     curStoppingColumn = numberOfColumns - 1;
+    
 grabbedSpinner = false;
 global.actionsEnabled = false;
+canMatch = true;
 
 //activate all Symbol "on spin triggers"
 var i = 0;

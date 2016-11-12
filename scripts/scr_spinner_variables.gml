@@ -64,3 +64,11 @@
     bottomMostLimit = rowCenter; // the lowest point that symbols may go relative to the scree
     curStoppingColumn = 0; // this determines the order that the spinner stops columns (either from left to right or from right to left)
     slotState = 0; // 0 = not spinning, 1 = spinning
+
+/***************************************************
+  symbol Collection
+ ***************************************************/
+ 
+symbolCollectionDelay = 20
+current_match_row = 0;
+canMatch = true;
