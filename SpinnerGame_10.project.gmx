@@ -164,15 +164,15 @@
         </scripts>
       </scripts>
       <scripts name="Spinner">
-        <script>scripts\scr_spinner_variables.gml</script>
-        <scripts name="creation">
+        <scripts name="main">
+          <script>scripts\scr_spinner_variables.gml</script>
           <script>scripts\scr_spinner_create.gml</script>
+          <script>scripts\scr_spinner_step.gml</script>
         </scripts>
         <scripts name="state 0 (stopped)">
           <script>scripts\scr_spinner_flick.gml</script>
           <script>scripts\scr_spinner_reset.gml</script>
           <script>scripts\scr_spinner_move.gml</script>
-          <script>scripts\scr_spinner_step.gml</script>
           <script>scripts\scr_spinner_begin_spinning.gml</script>
         </scripts>
         <scripts name="state 1(moving)">
@@ -189,10 +189,6 @@
           <script>scripts\scr_spinner_shift.gml</script>
           <script>scripts\scr_spinner_draw.gml</script>
           <script>scripts\scr_return_random_symbol_on_screen.gml</script>
-          <scripts name="Scatters">
-            <script>scripts\scr_activate_neutrals.gml</script>
-            <script>scripts\scr_deactivate_neutrals.gml</script>
-          </scripts>
         </scripts>
       </scripts>
       <scripts name="Spells">
@@ -323,14 +319,6 @@
         <objects name="Symbols">
           <object>objects\obj_symbol</object>
           <object>objects\obj_symbol_parent</object>
-          <objects name="Scatters">
-            <object>objects\obj_scatter_parent</object>
-            <object>objects\obj_swordsymbol</object>
-            <object>objects\obj_shieldsymbol</object>
-          </objects>
-          <objects name="Neutrals">
-            <object>objects\obj_neutral_parent</object>
-          </objects>
         </objects>
         <object>objects\obj_actioncoin</object>
       </objects>

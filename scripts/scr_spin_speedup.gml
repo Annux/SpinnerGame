@@ -5,13 +5,6 @@ for(var j = 0; j < symbolsPerColumn; j++)
 {
     scr_spinner_move(i, j);
     // Accelerate the spinner up to max speed
-    if(symbolObject[i, j].vspeed < maxSpinSpeed)
-    {
-        symbolObject[i, j].vspeed += spinAccel;
-    }
-    else
-    {
-        symbolObject[i, j].vspeed = maxSpinSpeed;
-    }
+    symbolObject[i, j].vspeed = min(symbolObject[i, j].vspeed + spinAccel, maxSpinSpeed);
 }
 

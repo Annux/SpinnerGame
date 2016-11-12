@@ -7,12 +7,6 @@ if (position_meeting(mouse_x,mouse_y,self) && mouse_check_button_pressed(mb_left
     inPosition = false;
     yOffset = y - mouse_y; // the offset position of where the player clicked
     origMouseY = mouse_y;
-    /*// turn off scatters if they're visible
-    if(neutralsAreVisible)
-    {
-        scr_deactivate_neutrals();
-        neutralsAreVisible = false;
-    }*/
 }
 else if(!grabbedSpinner && !inPosition) // reset the slots if the player lets go without spinning
 {
@@ -25,7 +19,6 @@ else if(!grabbedSpinner && !inPosition) // reset the slots if the player lets go
 // while the player is holding/dragging the spinner
 if(grabbedSpinner)
 {
-    show_debug_message("Grabbed")
     if (mouse_y + yOffset < topLimit) // if they drag too far up, reset to middle
         || (mouse_check_button_released(mb_left)) // if they let go, reset to middle
     {

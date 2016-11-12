@@ -1,12 +1,14 @@
 i = curStoppingColumn;
 colState[i] = 1;
+resetAlarm = false;
 
 if(global.turn == 1)
 {
     curStoppingColumn++;
     if(i < numberOfColumns - 1)
     {
-        alarm[0] = spinDelayPrCol*room_speed;
+        i++;
+        resetAlarm = true;
     }
 }
 else
@@ -14,16 +16,21 @@ else
     curStoppingColumn--;
     if(i > 0)
     {
-        alarm[0] = spinDelayPrCol*room_speed;
+        i = numberOfColumns - i;
+        resetAlarm = true;
     }
 }
 
-/* Dear Snow,
-//  #IWantToBelieve
-//  I am a Belieber
-//  Believe in your Smellf
-//  Google these things, you will not be disappointed.
-
-// Sincerely,
-//      Jesus Christ
-//          The lord's deadbeat son
+if(resetAlarm)
+{
+    if(array_length_1d(spinDuration) >= i)
+    {
+        show_debug_message("stopping Col " + string(i) + " in " + string(spinDuration[i]) + " seconds");
+        show_debug_message("decelerationg Col " + string(i) + " at a rate of " + string(spinDecel[i]) + "% per frame");
+        alarm[0] = spinDuration[i]*room_speed;
+    }
+    else
+    {
+        alarm[0] = spinDelayPrCol*room_speed;
+    }
+}

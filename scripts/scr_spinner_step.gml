@@ -6,5 +6,4 @@ switch(slotState)
     case (1): // spinning
         scr_spinner_spin();
         break;
-    //case (2): // tallying the score
 }

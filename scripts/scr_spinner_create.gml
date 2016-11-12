@@ -98,23 +98,11 @@ for(var i = 0; i < numberOfColumns; i++)
     topMostLimit = rowPos[symbolsPerColumn-1];
     bottomMostLimit = botVisLimit;
 }
-////////////////////////////////////////////////////
-// ----------------- NEUTRALS ------------------  //
-//       Create the neutrals & set them up        //
-////////////////////////////////////////////////////
-/*for(var n = 0; n < maxNumOfNeutrals; n++)
-{
-    swordSymbols[n] = instance_create(0, 0, obj_swordsymbol)
-    swordSymbols[n].visible = 0;
-    shieldSymbols[n] = instance_create(0, 0, obj_shieldsymbol)
-    shieldSymbols[n].visible = 0;
-}*/
 
 for(var i = 0; i < numberOfColumns; i++)
 {
     for(var j = 0; j < numberOfRows; j++)
     {
         scr_spinner_move(i, j)       // do the initial slot clear
-        //neutralPosition[i, j] = true; // variable which stores whether or not a position is available (so 2 neutrals don't spawn in the same place)
     }
 }

@@ -2,7 +2,6 @@ show_debug_message("///NEXT SPIN///");
 // gets the slot machine results and awards the spinning player accordingly.
 for(var i = 0; i < numberOfRows; i++)
 {
-    vspeed = 0;
     // determines PLAYER 1 matches - starts from the leftmost column and multiplies results going towards the right
     var matched = false;
     if(global.turn = 1)
@@ -95,33 +94,3 @@ for(var i = 0; i < numberOfRows; i++)
 // resets the slot machine for the next spin
 slotState = 0;
 scr_deduct_action();
-
-/*
-// NEUTRALS -Assign the neutrals to their new slot positions
-for(var i = 0; i < numberOfColumns; i++)
-{   
-    for(var j = 0; j < numberOfRows; j++)
-    {    
-        neutralPosition[i,j] = true;
-    }
-}
-scr_activate_neutrals();
-scr_activate_neutrals();
-neutralsAreVisible = true;
-
-// gets the neutrals and awards the player accordingly
-var num = 0;
-for(var p = 0; p < maxNumOfNeutrals; p += 1)
-{
-    if(swordSymbols[p].visible == true)
-        num++;
-}
-show_debug_message("there are " + string(num) + " swords");
-num = 0;
-for(var q = 0; q < maxNumOfNeutrals; q += 1)
-{
-    if(shieldSymbols[q].visible == true)
-        num++;
-}
-show_debug_message("there are " + string(num) + " shields");
-*/

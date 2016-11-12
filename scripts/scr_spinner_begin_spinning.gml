@@ -14,7 +14,7 @@ if (mouse_y + yOffset > bottomLimit)
     }
     
     // this alarm will tell the 'curStoppingColumn' to start slowing down to a stop, then set the alarm for the next column
-    alarm[0] = spinDuration*room_speed;
+    alarm[0] = spinDuration[0]*room_speed;
     // The first column to stop for P1 is the leftmost column
     if(global.turn = 1)
         curStoppingColumn = 0;
