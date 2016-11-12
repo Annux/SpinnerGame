@@ -142,6 +142,7 @@
           <script>scripts\scr_healthbar_draw.gml</script>
           <script>scripts\scr_manabar_variables.gml</script>
           <script>scripts\scr_manabar_draw.gml</script>
+          <script>scripts\scr_mana_add.gml</script>
         </scripts>
         <scripts name="Banner">
           <script>scripts\scr_banner_create.gml</script>
@@ -182,7 +183,12 @@
           <script>scripts\scr_spin_slowdown.gml</script>
           <script>scripts\scr_spin_jigglestop.gml</script>
           <script>scripts\scr_spin_end.gml</script>
-          <script>scripts\scr_spinner_check_matches.gml</script>
+          <script>scripts\scr_collect_mana.gml</script>
+          <script>scripts\scr_spinner_check_matches_old.gml</script>
+          <script>scripts\scr_spinner_start_checking_matches.gml</script>
+          <script>scripts\scr_spinner_matching_alarm.gml</script>
+          <script>scripts\scr_spinner_match_symbols_in_row.gml</script>
+          <script>scripts\scr_spinner_end_matching.gml</script>
         </scripts>
         <scripts name="other">
           <script>scripts\scr_spinner_destroy.gml</script>
@@ -242,6 +248,7 @@
           </scripts>
         </scripts>
         <script>scripts\scr_null.gml</script>
+        <script>scripts\scr_on_spinner_end_null.gml</script>
       </scripts>
       <scripts name="Game Manager">
         <script>scripts\scr_game_switch_turns.gml</script>
@@ -259,10 +266,19 @@
         <script>scripts\scr_symbol_on_spin_activate.gml</script>
         <scripts name="Matching">
           <scripts name="Mana">
+            <script>scripts\scr_symbol_match_null.gml</script>
             <script>scripts\scr_symbol_match_red_mana.gml</script>
             <script>scripts\scr_symbol_match_green_mana.gml</script>
             <script>scripts\scr_symbol_match_blue_mana.gml</script>
             <script>scripts\scr_symbol_match_purple_mana.gml</script>
+            <scripts name="ManaPartical">
+              <script>scripts\scr_mana_partial_create_new.gml</script>
+              <script>scripts\scr_mana_partical_step.gml</script>
+              <scripts name="trail">
+                <script>scripts\scr_mana_partical_trail_create.gml</script>
+                <script>scripts\scr_mana_partical_trail_step.gml</script>
+              </scripts>
+            </scripts>
           </scripts>
         </scripts>
         <scripts name="Stop on screen">
@@ -319,6 +335,18 @@
         <objects name="Symbols">
           <object>objects\obj_symbol</object>
           <object>objects\obj_symbol_parent</object>
+          <objects name="Scatters">
+            <object>objects\obj_scatter_parent</object>
+            <object>objects\obj_swordsymbol</object>
+            <object>objects\obj_shieldsymbol</object>
+          </objects>
+          <objects name="Neutrals">
+            <object>objects\obj_neutral_parent</object>
+          </objects>
+          <objects name="ManaParticals">
+            <object>objects\obj_mana_partical</object>
+            <object>objects\obj_mana_partical_trail</object>
+          </objects>
         </objects>
         <object>objects\obj_actioncoin</object>
       </objects>

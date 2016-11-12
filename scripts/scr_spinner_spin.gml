@@ -42,17 +42,18 @@ for(var i = 0; i < numberOfColumns; i++)
             for(var j = 0; j < numberOfRows; j++)
             {
                 var symbol = symbolObject[i,j];
-                scr_symbol_stop_on_screen_activate(symbol); 
+                scr_symbol_stop_on_screen_activate(symbol);                
             }
             break;
         default:
             show_debug_message("Error handling for scr_spinner_spin?");
             break;
+            
     }
 }
 
 
 if(allRowsStopped)
 {
-    scr_spinner_check_matches();
+    scr_spinner_start_checking_matches();
 }

@@ -21,8 +21,8 @@ enum class {warrior, wizard, thief, acolyte};
 enum spell {swordstrike, bash, shield, shatter, zap, heal, fireball, freeze, manabomb, smoke_bomb};
 
 global.mana_gain[0] = 1;
-global.mana_gain[1] = 2;
-global.mana_gain[2] = 4;
-global.mana_gain[3] = 8;
-global.mana_gain[4] = 16;
+global.mana_gain[1] = 1;
+global.mana_gain[2] = 2;
+global.mana_gain[3] = 4;
+global.mana_gain[4] = 8;
 
