@@ -7,6 +7,19 @@ if (position_meeting(mouse_x,mouse_y,self) && mouse_check_button_pressed(mb_left
     inPosition = false;
     yOffset = y - mouse_y; // the offset position of where the player clicked
     origMouseY = mouse_y;
+    prevMouseY = mouse_y;
+    
+    var closestColDist = room_width;
+    closestCol = 0;
+    for(var i = 0; i < numberOfColumns; i++)
+    {
+        if(closestColDist > abs(mouse_x - colPos[i]))
+        {
+            closestColDist = abs(mouse_x - colPos[i])
+            closestCol = i;
+        }
+    }
+    show_debug_message(string(closestCol) + " is the closest column");
 }
 else if(!grabbedSpinner && !inPosition) // reset the slots if the player lets go without spinning
 {
@@ -19,30 +32,37 @@ else if(!grabbedSpinner && !inPosition) // reset the slots if the player lets go
 // while the player is holding/dragging the spinner
 if(grabbedSpinner)
 {
-    if (mouse_y + yOffset < topLimit) // if they drag too far up, reset to middle
-        || (mouse_check_button_released(mb_left)) // if they let go, reset to middle
+    var distanceFlicked = mouse_y - prevMouseY;
+    // BEGINNING THE 'SPINNING' STATE //
+    if (mouse_check_button_released(mb_left) || mouse_y > bottomLimit) // if they let go, reset to middle
+    {
+        if(distanceFlicked > startSpinSpeed)
+        {
+            scr_spinner_begin_spinning(distanceFlicked);
+            grabbedSpinner = false;
+        }
+        else
+        {
+            grabbedSpinner = false;
+        }
+    }
+    // DRAGGING TOO FAR UP //
+    else if (mouse_y + yOffset < topLimit) 
     {
         grabbedSpinner = false;
     }
-    // if they are within the spinner area, move the symbols based on the mouse/finger position
-    else if (mouse_y + yOffset < bottomLimit)
+    // DRAGGING //
+    else if (mouse_y < bottomLimit)
     {
         for(var i = 0; i < numberOfColumns; i++)
         {
             for(var j = 0; j < symbolsPerColumn; j++)
             {
-                symbolObject[i, j].y = rowPos[j] + (mouse_y - origMouseY);
-                prevMouseY = mouse_y - origMouseY;
+                var distanceToClosestCol = abs(closestCol - i) + 1;
+                symbolObject[i, j].y = rowPos[j] + (mouse_y - origMouseY) / (distanceToClosestCol * columnDrag);
+                prevMouseY = mouse_y;
                 scr_spinner_move(i, j);
             }
         }
-    }
-////////////////////////////////////
-// BEGINNING THE 'SPINNING' STATE //
-////////////////////////////////////
-    // if they drag too far down, begin the spin
-    else if (mouse_y + yOffset > bottomLimit)
-    {
-        scr_spinner_begin_spinning();
     }
 }

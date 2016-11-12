@@ -7,17 +7,17 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>16</bbox_left>
-  <bbox_right>167</bbox_right>
-  <bbox_top>0</bbox_top>
-  <bbox_bottom>207</bbox_bottom>
+  <bbox_left>31</bbox_left>
+  <bbox_right>172</bbox_right>
+  <bbox_top>39</bbox_top>
+  <bbox_bottom>172</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>184</width>
+  <width>208</width>
   <height>208</height>
   <frames>
     <frame index="0">images\spr_PurpleSpinIcon_0.png</frame>

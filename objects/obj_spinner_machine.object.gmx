@@ -45,10 +45,6 @@
         image_xscale = desiredHeight/sprite_height;
         image_yscale = desiredHeight/sprite_height;
     }
-    
-    actionPosX = x + (505 - 551);
-    actionPosY = y + (790 - 417);
-    instance_create(actionPosX, actionPosY, obj_actioncoin);
 }
 </string>
           </argument>
