@@ -1,19 +1,24 @@
-///scr_symbol_match_purple_mana(player turn, matches)
+///scr_symbol_match_purple_mana(player turn, matches,symbols)
 
 var turn = argument0;
 var matches = argument1
+var symbols = argument2
+var type = manaType.purple
 
-var value = global.mana_gain[matches]
+show_debug_message(string(matches) + " Purples");
 
-show_debug_message("+" + string(value) + " Purple");
-global.manaBar[global.turn,manaType.purple].curMana += value;
-
-/*
-
-STAY OUT OF MY SWAMP!
-
-~~Sherk
-
-2001 - 2004
-
-Rip in peice
+var i = 0;
+repeat(array_length_1d(symbols))
+    {
+    var value = global.mana_gain[i]
+    
+    with(symbols[i])
+        {
+        var obj = global.manaBar[global.turn,type]
+        if (instance_exists(obj))
+            {
+            scr_mana_partial_create_new(x,y,obj.x,obj.y,type,value)
+            }
+        }
+    i += 1;
+    }

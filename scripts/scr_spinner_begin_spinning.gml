@@ -1,5 +1,7 @@
 // WHEN: Called by scr_spinner_flick when the player drags their finger enough to start the spinner
 // WHAT: Begins the 'spinning' of the slot machine by preparign any variables necessary for that process
+canMatch = true; //re-enable matching
+
 if (mouse_y + yOffset > bottomLimit)
 {
     // Move the columns and set them all into the 'moving' state

@@ -60,4 +60,18 @@ topMostLimit = rowCenter; // the highest point that symbols may go relative to t
 bottomVisLimit = rowCenter; // the lowest point symbols may begin to be visible
 bottomMostLimit = rowCenter; // the lowest point that symbols may go relative to the scree
 curStoppingColumn = 0; // this determines the order that the spinner stops columns (either from left to right or from right to left)
+<<<<<<< Updated upstream
 slotState = 0; // 0 = not spinning, 1 = spinning
+=======
+curOffset = 0;
+
+/***************************************************
+  symbol Collection
+ ***************************************************/
+ 
+symbolCollectionDelay = 20
+current_match_row = 0;
+canMatch = true;
+
+
+>>>>>>> Stashed changes

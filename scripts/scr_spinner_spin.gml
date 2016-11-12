@@ -40,9 +40,21 @@ for(var i = 0; i < numberOfColumns; i++)
         // stopped
         case 4:
             for(var j = 0; j < numberOfRows; j++)
+<<<<<<< Updated upstream
             {
                 var symbol = symbolObject[i,j];
                 scr_symbol_stop_on_screen_activate(symbol); 
+=======
+                    {
+                    var symbol = symbolObject[i,j];
+                    scr_symbol_stop_on_screen_activate(symbol); 
+                    }     
+        
+            if(i == numberOfColumns - 1)
+            {   
+                    
+                scr_spinner_start_checking_matches();
+>>>>>>> Stashed changes
             }
             break;
         default:
