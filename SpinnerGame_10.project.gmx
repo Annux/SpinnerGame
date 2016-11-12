@@ -335,8 +335,6 @@
         <objects name="Symbols">
           <object>objects\obj_symbol</object>
           <object>objects\obj_symbol_parent</object>
-<<<<<<< Updated upstream
-=======
           <objects name="Scatters">
             <object>objects\obj_scatter_parent</object>
             <object>objects\obj_swordsymbol</object>
@@ -349,7 +347,6 @@
             <object>objects\obj_mana_partical</object>
             <object>objects\obj_mana_partical_trail</object>
           </objects>
->>>>>>> Stashed changes
         </objects>
         <object>objects\obj_actioncoin</object>
       </objects>

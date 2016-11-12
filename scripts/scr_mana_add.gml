@@ -2,4 +2,4 @@
 var type = argument0;
 var amount = argument1;
 
-global.manaBar[global.turn,manaType.red].curMana += value;
+global.manaBar[global.turn,type].curMana += value;
