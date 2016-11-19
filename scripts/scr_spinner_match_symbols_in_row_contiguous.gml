@@ -3,7 +3,6 @@
 //checks a single row for matches and activates the mached symbol's collection action 
 
 var row = argument0
-var matches = 0;
 var obj = noone;
 var didMatch = false;
 var symbols = noone;
@@ -19,11 +18,10 @@ if(global.turn = 1)
         
         symbols[0] = obj;
         
-        for (var i=1; i<numberOfColumns-1; i+=1)
+        for (var i=1; i<numberOfColumns; i+=1)
             {
             if((symbolObject[i, row].state == Type  || symbolObject[i, row].state == symbolState.wild) && symbolObject[i, row].canMatch )  
                 {
-                matches += 1;
                 symbols[i] = symbolObject[i, row];
                 }
             else
@@ -50,7 +48,6 @@ if(global.turn = 2)
             {
             if((symbolObject[i, row].state == Type  || symbolObject[i, row].state == symbolState.wild) && symbolObject[i, row].canMatch )  
                 {
-                matches += 1;
                 symbols[j] = symbolObject[i, row];
                 j += 1;
                 }
@@ -64,7 +61,9 @@ if(global.turn = 2)
    
 if (didMatch)
     {
-    script_execute(obj.matchAction, global.turn, matches,symbols);
+    //match action scripts return their end delay
+    matchEndDelay = script_execute(obj.matchAction, global.turn,symbols);
+
     }
 else
     {

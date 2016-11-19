@@ -12,7 +12,7 @@ if (pos >= 0.98)
 else
     {
     pos += (1 - pos) / smoothing
-    var obj = instance_create(x,y,obj_mana_partical_trail);
+    var obj = instance_create(x,y,obj_mana_particle_trail);
     obj.type = type;
     }
 

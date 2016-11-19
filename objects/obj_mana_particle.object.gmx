@@ -8,29 +8,6 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="0" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>scr_mana_partical_trail_create();
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -48,7 +25,30 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_mana_partical_trail_step();
+            <string>scr_mana_particle_step();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="10">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>scr_mana_add(type,value)
 </string>
           </argument>
         </arguments>
@@ -71,32 +71,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_colour(c_white)
-draw_circle(x,y,24 * size,false)
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>draw_set_colour(global.ManaColor[type])
-draw_circle(x,y,32 * size,false)
+            <string>draw_set_alpha(0.4);
+draw_set_blend_mode(bm_add);
+draw_set_colour(global.ManaColor[type]);
+draw_circle(x,y,32,false);
+
+draw_set_alpha(0.1);
+draw_set_colour(c_white);
+draw_circle(x,y,16,false);
+draw_set_blend_mode(bm_normal);
+draw_set_alpha(1);
 </string>
           </argument>
         </arguments>

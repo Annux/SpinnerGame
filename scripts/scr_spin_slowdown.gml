@@ -7,7 +7,7 @@ for(var j = 0; j < symbolsPerColumn; j++)
     // decelerate
     if(symbolObject[i, j].vspeed > minSpinSpeed && symbolObject[i,j].y < rowPos[j] + rowSeperation/4)
     {
-        switch(global.turn = 1)
+        switch(global.turn)
         {
             case (1):
                 stoppedColumnIndex = i;

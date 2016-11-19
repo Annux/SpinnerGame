@@ -23,7 +23,9 @@
     </datafile>
   </datafiles>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_match_hit</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_infobar_thing</sprite>
     <sprite>sprites\spr_toolTip</sprite>
@@ -143,6 +145,7 @@
           <script>scripts\scr_manabar_variables.gml</script>
           <script>scripts\scr_manabar_draw.gml</script>
           <script>scripts\scr_mana_add.gml</script>
+          <script>scripts\scr_manabar_get_endx.gml</script>
         </scripts>
         <scripts name="Banner">
           <script>scripts\scr_banner_create.gml</script>
@@ -183,12 +186,15 @@
           <script>scripts\scr_spin_slowdown.gml</script>
           <script>scripts\scr_spin_jigglestop.gml</script>
           <script>scripts\scr_spin_end.gml</script>
+          <script>scripts\scr_spinner_check_spin_matchs.gml</script>
           <script>scripts\scr_collect_mana.gml</script>
-          <script>scripts\scr_spinner_check_matches_old.gml</script>
           <script>scripts\scr_spinner_start_checking_matches.gml</script>
           <script>scripts\scr_spinner_matching_alarm.gml</script>
-          <script>scripts\scr_spinner_match_symbols_in_row.gml</script>
+          <script>scripts\scr_spinner_match_symbols_in_row_contiguous.gml</script>
+          <script>scripts\scr_spinner_match_symbols_in_row_noncontiguous.gml</script>
           <script>scripts\scr_spinner_end_matching.gml</script>
+          <script>scripts\scr_spinner_end_matching_alarm.gml</script>
+          <script>scripts\scr_spinner_check_adjacent_symbols.gml</script>
         </scripts>
         <scripts name="other">
           <script>scripts\scr_spinner_destroy.gml</script>
@@ -265,18 +271,19 @@
         <script>scripts\scr_symbol_draw.gml</script>
         <script>scripts\scr_symbol_on_spin_activate.gml</script>
         <scripts name="Matching">
+          <script>scripts\scr_symbol_match_null.gml</script>
           <scripts name="Mana">
-            <script>scripts\scr_symbol_match_null.gml</script>
+            <script>scripts\scr_symbol_match_mana.gml</script>
             <script>scripts\scr_symbol_match_red_mana.gml</script>
             <script>scripts\scr_symbol_match_green_mana.gml</script>
             <script>scripts\scr_symbol_match_blue_mana.gml</script>
             <script>scripts\scr_symbol_match_purple_mana.gml</script>
-            <scripts name="ManaPartical">
-              <script>scripts\scr_mana_partial_create_new.gml</script>
-              <script>scripts\scr_mana_partical_step.gml</script>
+            <scripts name="ManaParticle">
+              <script>scripts\scr_mana_particle_create_new.gml</script>
+              <script>scripts\scr_mana_particle_step.gml</script>
               <scripts name="trail">
-                <script>scripts\scr_mana_partical_trail_create.gml</script>
-                <script>scripts\scr_mana_partical_trail_step.gml</script>
+                <script>scripts\scr_mana_particle_trail_create.gml</script>
+                <script>scripts\scr_mana_particle_trail_step.gml</script>
               </scripts>
             </scripts>
           </scripts>
@@ -344,8 +351,8 @@
             <object>objects\obj_neutral_parent</object>
           </objects>
           <objects name="ManaParticals">
-            <object>objects\obj_mana_partical</object>
-            <object>objects\obj_mana_partical_trail</object>
+            <object>objects\obj_mana_particle</object>
+            <object>objects\obj_mana_particle_trail</object>
           </objects>
         </objects>
         <object>objects\obj_actioncoin</object>

@@ -34,5 +34,9 @@ for(var j = 0; j < symbolsPerColumn; j++)
 if(inPosition)
 {
     colState[i] = 3;
+    
+    //check if it matches the symbol beside it
+    scr_spinner_check_adjacent_symbols(i);  
+    
     exit;
 }

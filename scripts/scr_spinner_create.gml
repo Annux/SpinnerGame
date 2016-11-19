@@ -47,12 +47,12 @@ for(var i = 0; i < numberOfColumns; i++)
         var pr = scr_symbol_create_new_symbol(symbolState.purple)
         
         ds_list_add(spinnerList[i],bl,rd,gr,pr);
+
     }
 
     // Create all the wild symbols in all middle columns (wilds do not appear in row 0 or the last row because starting a chain on a wild is OP opie)
     if(i < numberOfColumns - 1 && i > 0)
-    {
-            
+    {           
     
         for(var n = 0; n < wildsPerColumn; n++)
         {
