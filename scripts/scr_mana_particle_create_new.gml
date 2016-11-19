@@ -1,4 +1,4 @@
-///scr_mana_partial_create_new(x start,y start,x end, y end,type,value)
+///scr_mana_particle_create_new(x start,y start,x end, y end,type,value,max arc)
 
 var x1 = argument0;
 var y1 = argument1;
@@ -7,10 +7,12 @@ var y2 = argument3;
 
 var type = argument4;
 var val = argument5;
+var max_arc = argument6;
+
 
 repeat(val)
     {
-    var obj = instance_create(x1,y1,obj_mana_partical);
+    var obj = instance_create(x1,y1,obj_mana_particle);
     
     obj.start_x = x1;
     obj.start_y = y1;
@@ -19,6 +21,7 @@ repeat(val)
     
     obj.type = type;
     obj.value = 1;
+    obj.arc = random_range(-max_arc,max_arc);
     
     with(obj)
         {
@@ -26,9 +29,7 @@ repeat(val)
         dist_x = target_x - x;
         dist_y = target_y - y;
         
-        arc = random_range(-100,100);
-        
-        smoothing = random_range(6,12);
+        smoothing = random_range(4,8);
         
         pos = 0
         }    

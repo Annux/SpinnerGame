@@ -1,0 +1,75 @@
+///scr_match_symbols_in_row(row)
+
+//checks a single row for matches and activates the mached symbol's collection action 
+
+var row = argument0
+var obj = noone;
+var didMatch = false;
+var symbols = noone;
+
+if(global.turn = 1)
+    {
+    show_debug_message("Player 1 mached:")
+    obj = symbolObject[0, row]
+    if (obj.canMatch)
+        {
+        didMatch = true
+        var Type = obj.state;
+        
+        symbols[0] = obj;
+        
+        for (var i=1; i<numberOfColumns; i+=1)
+            {
+            if((symbolObject[i, row].state == Type  || symbolObject[i, row].state == symbolState.wild) && symbolObject[i, row].canMatch )  
+                {
+                symbols[i] = symbolObject[i, row];
+                }
+            else
+                {
+                break;
+                }
+            }
+        }
+    }
+    
+if(global.turn = 2)
+    {
+    show_debug_message("Player 2 mached:")
+    obj = symbolObject[numberOfColumns-1, row]
+    if (obj.canMatch)
+        {
+        didMatch = true
+        var Type = obj.state;
+        
+        symbols[0] = obj;
+        
+        var j = 1;
+        for (var i=numberOfColumns-2; i>-1; i-=1)
+            {
+            if((symbolObject[i, row].state == Type  || symbolObject[i, row].state == symbolState.wild) && symbolObject[i, row].canMatch )  
+                {
+                symbols[j] = symbolObject[i, row];
+                j += 1;
+                }
+            else
+                {
+                break;
+                }
+            }
+        }
+    }
+   
+if (didMatch)
+    {
+<<<<<<< HEAD:scripts/scr_spinner_match_symbols_in_row.gml
+    script_execute(obj.matchAction, global.turn, matches, symbols);
+=======
+    //match action scripts return their end delay
+    matchEndDelay = script_execute(obj.matchAction, global.turn,symbols);
+
+>>>>>>> origin/master:scripts/scr_spinner_match_symbols_in_row_contiguous.gml
+    }
+else
+    {
+    show_debug_message("Nothing in row: " + string(row))
+    }

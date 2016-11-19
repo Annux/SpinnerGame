@@ -1,27 +1,17 @@
-///scr_symbol_match_green_mana(player turn, matches,symbols)
+///scr_symbol_match_green_mana(player turn,symbols)
 
 var turn = argument0;
-var matches = argument1
-var symbols = argument2
+var symbols = argument1;
 var type = manaType.green
+var end_delay = 30;
+var matches = array_length_1d(symbols);
 
 show_debug_message(string(matches) + " Greens");
 
-var i = 0;
-repeat(array_length_1d(symbols))
-    {
-    var value = global.mana_gain[i]
-    
-    with(symbols[i])
-        {
-        var obj = global.manaBar[global.turn,type]
-        if (instance_exists(obj))
-            {
-            scr_mana_partial_create_new(x,y,obj.x,obj.y,type,value)
-            }
-        }
-    i += 1;
-    }
+scr_symbol_match_mana(turn,symbols,type)
+
+return end_delay;
+
 
 /*
 

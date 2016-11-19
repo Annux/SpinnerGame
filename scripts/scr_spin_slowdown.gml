@@ -7,7 +7,10 @@ for(var j = 0; j < symbolsPerColumn; j++)
     // decelerate
     if(symbolObject[i, j].vspeed > minSpinSpeed && symbolObject[i,j].y < rowPos[j] + rowSeperation/4)
     {
+<<<<<<< HEAD
         // stop columns sequencially
+=======
+>>>>>>> origin/master
         switch(global.turn)
         {
             // start at column 0, go from left to right
