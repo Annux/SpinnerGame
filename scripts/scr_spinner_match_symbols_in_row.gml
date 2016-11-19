@@ -64,7 +64,7 @@ if(global.turn = 2)
    
 if (didMatch)
     {
-    script_execute(obj.matchAction, global.turn, matches,symbols);
+    script_execute(obj.matchAction, global.turn, matches, symbols);
     }
 else
     {

@@ -12,4 +12,3 @@ else
     show_debug_message("Done Matching")
     scr_spinner_end_matching()
     }
-

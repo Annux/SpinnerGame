@@ -52,6 +52,7 @@
         </sprites>
         <sprites name="Turnbar">
           <sprite>sprites\spr_actioncoin</sprite>
+          <sprite>sprites\spr_action_bar</sprite>
         </sprites>
       </sprites>
       <sprites name="Player">
@@ -251,9 +252,9 @@
         <script>scripts\scr_on_spinner_end_null.gml</script>
       </scripts>
       <scripts name="Game Manager">
+        <script>scripts\scr_Global_Variables.gml</script>
         <script>scripts\scr_game_switch_turns.gml</script>
         <script>scripts\scr_deduct_action.gml</script>
-        <script>scripts\scr_Global_Variables.gml</script>
       </scripts>
       <scripts name="Symbols">
         <script>scripts\scr_symbol_change_state.gml</script>
@@ -271,7 +272,7 @@
             <script>scripts\scr_symbol_match_green_mana.gml</script>
             <script>scripts\scr_symbol_match_blue_mana.gml</script>
             <script>scripts\scr_symbol_match_purple_mana.gml</script>
-            <scripts name="ManaPartical">
+            <scripts name="ManaParticle">
               <script>scripts\scr_mana_partial_create_new.gml</script>
               <script>scripts\scr_mana_partical_step.gml</script>
               <scripts name="trail">
@@ -293,6 +294,10 @@
       <scripts name="DragAndDrop">
         <script>scripts\scr_dragAndDrop.gml</script>
         <script>scripts\scr_dragAndDropCreate_example.gml</script>
+      </scripts>
+      <scripts name="Actionbar">
+        <script>scripts\scr_actionbar_create.gml</script>
+        <script>scripts\scr_actioncoin_animation.gml</script>
       </scripts>
     </scripts>
   </scripts>
@@ -331,7 +336,8 @@
       </objects>
       <objects name="Spinner">
         <object>objects\obj_spinner_machine</object>
-        <object>objects\obj_spinner_BG</object>
+        <object>objects\obj_action_bar</object>
+        <object>objects\obj_actioncoin</object>
         <objects name="Symbols">
           <object>objects\obj_symbol</object>
           <object>objects\obj_symbol_parent</object>
@@ -348,7 +354,6 @@
             <object>objects\obj_mana_partical_trail</object>
           </objects>
         </objects>
-        <object>objects\obj_actioncoin</object>
       </objects>
     </objects>
     <objects name="Spells">

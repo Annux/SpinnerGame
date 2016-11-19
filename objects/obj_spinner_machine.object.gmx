@@ -30,20 +30,24 @@
     padding = 20*global.sizeH;
     leftSlotBound = global.player[1].myBanner.x + global.player[1].myBanner.sprite_xoffset + padding;
     rightSlotBound = global.player[2].myBanner.x - global.player[2].myBanner.sprite_xoffset - padding;
-    topSlotBound = global.player[1].y + sprite_get_height(spr_statbars)*global.sizeH / 2;
-    botSlotBound = global.deviceHeight - 50*global.sizeH;
+    topSlotBound = global.player[1].y + (sprite_get_height(spr_statbars)*global.sizeH / 2);
+    botSlotBound = global.actionBar.y
     desiredWidth = rightSlotBound - leftSlotBound;
     desiredHeight = botSlotBound - topSlotBound;
-    
-    if(desiredHeight &gt; desiredWidth)
+
+    if(desiredHeight &gt; desiredWidth)// Width is smaller than height, so scale up to max width
     {
-        image_xscale = desiredWidth/sprite_width;
-        image_yscale = desiredWidth/sprite_width;
+        show_debug_message("scaled spinner by width");
+        image_xscale = desiredWidth/sprite_get_width(sprite_index);
+        image_yscale = desiredWidth/sprite_get_width(sprite_index);
+        y = topSlotBound + sprite_yoffset;
     }
-    else
+    else // Height is smaller than width, so scale up to max height
     {
-        image_xscale = desiredHeight/sprite_height;
-        image_yscale = desiredHeight/sprite_height;
+        show_debug_message("scaled spinner by height");
+        image_xscale = desiredHeight/sprite_get_height(sprite_index);
+        image_yscale = desiredHeight/sprite_get_height(sprite_index);
+        y = topSlotBound + sprite_yoffset;
     }
 }
 </string>

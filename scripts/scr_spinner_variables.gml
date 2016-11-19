@@ -69,6 +69,6 @@
   symbol Collection
  ***************************************************/
  
-symbolCollectionDelay = 20
+symbolCollectionDelay = 10;
 current_match_row = 0;
 canMatch = true;

@@ -1,8 +1,5 @@
 // CREATION //
 show_debug_message("Creating the spinner");
-//bgInstance = instance_create(x, y, obj_spinner_BG);
-//bgInstance.image_xscale = image_xscale;
-//bgInstance.image_yscale = image_yscale;
 
 ////////////////////////////////////////////////////////////
 // --------------------- COLUMNS ------------------------ //
@@ -103,6 +100,6 @@ for(var i = 0; i < numberOfColumns; i++)
 {
     for(var j = 0; j < numberOfRows; j++)
     {
-        scr_spinner_move(i, j)       // do the initial slot clear
+        scr_spinner_move(i, j) // do the initial slot clear
     }
 }
