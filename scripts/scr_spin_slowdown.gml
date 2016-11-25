@@ -7,27 +7,21 @@ for(var j = 0; j < symbolsPerColumn; j++)
     // decelerate
     if(symbolObject[i, j].vspeed > minSpinSpeed && symbolObject[i,j].y < rowPos[j] + rowSeperation/4)
     {
-<<<<<<< HEAD
-        // stop columns sequencially
-=======
->>>>>>> origin/master
         switch(global.turn)
         {
-            // start at column 0, go from left to right
             case (1):
                 stoppedColumnIndex = i;
                 break;
-            // start at last column, go from left to right
             case (2):
                 stoppedColumnIndex = numberOfColumns - 1 - i
                 break;
         }
-        // make sure a deceleration value exists for the column index
+        // make sure a deceleration value exists
         if(array_length_1d(spinDecel) >= i)
         {
             desiredDecel = spinDecel[stoppedColumnIndex];
         }
-        // otherwise assign a default deceleration rate for the column index
+        // otherwise assign a default deceleration rate
         else
         {
             desiredDecel = spinDecel[0] + spinDecelPrCol*stoppedColumnIndex;      

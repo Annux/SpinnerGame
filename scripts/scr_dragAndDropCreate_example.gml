@@ -12,13 +12,22 @@ isClicked = false;
 * hover_object1 to obj_example.
 */
 
-
 start_script = noone; //script that runs when you click the object
-spell_subject[0] = noone; //objects to check for hover_scriptX
-hover_script[0] = noone; //scrips that runs when you hover another object.
-drop_script[0] = noone; //scrips that runs when you drop the object
+hover_script1 = noone; //scrips that runs when you hover another object. 
+hover_script2 = noone;
+hover_script3 = noone;
+
+hover_object1 = noone; //objects to check for hover_scriptX
+hover_object2 = noone;
+hover_object3 = noone;
+
+drop_script1 = noone; //scrips that runs when you drop the object
+drop_script2 = noone;
+drop_script3 = noone;
 
 drop_object1 = noone;  //objects to check for drop_scriptX
+drop_object2 = noone; 
+drop_object3 = noone;
 
 startX = x; //position before you click.
 startY = y;

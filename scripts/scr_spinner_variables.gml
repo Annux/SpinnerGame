@@ -36,8 +36,8 @@
     
 ///////////////////////// SYMBOLS/////////////////////////
 //////////////////////////////////////////////////////////
-    manaPerColumn = 4;
-    wildsPerColumn = 2;
+    manaPerColumn = 5;
+    wildsPerColumn = 0;
 
 ///////////////////////// DRAWING POSITIONS /////////////////////////
 /////////////////////////////////////////////////////////////////////
@@ -66,9 +66,20 @@
     slotState = 0; // 0 = not spinning, 1 = spinning
 
 /***************************************************
+  Mid-spin matching
+ ***************************************************/
+
+for (var r=0; r<numberOfRows; r+=1)
+{
+    midSpinMatches[r] = 0;
+};
+
+    
+/***************************************************
   symbol Collection
  ***************************************************/
  
 symbolCollectionDelay = 10;
+matchEndDelay = 0;
 current_match_row = 0;
 canMatch = true;

@@ -61,13 +61,9 @@ if(global.turn = 2)
    
 if (didMatch)
     {
-<<<<<<< HEAD:scripts/scr_spinner_match_symbols_in_row.gml
-    script_execute(obj.matchAction, global.turn, matches, symbols);
-=======
     //match action scripts return their end delay
     matchEndDelay = script_execute(obj.matchAction, global.turn,symbols);
 
->>>>>>> origin/master:scripts/scr_spinner_match_symbols_in_row_contiguous.gml
     }
 else
     {

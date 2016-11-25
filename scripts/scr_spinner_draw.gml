@@ -1,5 +1,5 @@
 draw_sprite_ext(spr_Spinner_Frame, 0, x, y, image_xscale, image_yscale, 0, c_white, 1) // draw the frame
-draw_sprite_ext(spr_Spinner_BG, 0, x, y, image_xscale, image_yscale, 0, c_white, 1) // draw the background
+draw_sprite_ext(spr_Spinner_BG, 0, x, y, image_xscale, image_yscale, 0, c_white, 1) // draw the backgroun
 draw_self();
 
 /*for(var i = 0; i < numberOfColumns; i++)
