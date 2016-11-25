@@ -4,8 +4,11 @@ stretchY = min(1.2, 1 + sqrt(abs(vspeed*.00175)) * .5);
     
 //draw_self()
 draw_sprite_ext(sprite_index, image_index, x, y, image_xscale*stretchX,image_yscale*stretchY, 0, image_blend, 1);
+draw_sprite_ext(sprite_index, 1, x, y, image_xscale*stretchX,image_yscale*stretchY, 0, image_blend, fade_alpha);
 
 if (show_status)
 {
     draw_sprite(status_effect_sprite,image_index,x,y)
 }
+
+//draw_text(x,y,string(active))

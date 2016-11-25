@@ -5,6 +5,7 @@ var status = argument1;
 
 obj.status_effect = status;
 obj.status_effect_spins = argument2;
+obj.canMatch = true;
 
 with (obj)
     {

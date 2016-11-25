@@ -10,7 +10,7 @@ obj.canMatch = false;
 
 with(obj)
     {
-    image_speed = 0.1
+    image_speed = 0
     
     state = deafultState;
     scr_symbol_get_state_information(state);
@@ -19,6 +19,11 @@ with(obj)
     show_status = false;
     status_effect = symbol_status_effect.normal;
     scr_symbol_get_status_effect_info(status_effect)
+    
+    active = true;
+    fade_alpha = 0;
+    fade_alpha_target = 0;
+    fade_alpha_smoothing = 4;
       
     }
     

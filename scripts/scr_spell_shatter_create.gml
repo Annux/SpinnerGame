@@ -1,6 +1,6 @@
 spellName = "Shatter";
 spellScript = asset_get_index("scr_spell_shatter");
-spellIcon = spr_shatter
+spellIcon = spr_shatter;
 
 for(var i = 0; i < global.manaTypes; i++)
 {
@@ -9,4 +9,4 @@ for(var i = 0; i < global.manaTypes; i++)
 spellCost[manaType.red] = 1;
 spellCost[manaType.blue] = 1;
 
-//spellEffectDur = .75*room_speed;
+spellEffectDur = 0.75 * room_speed;

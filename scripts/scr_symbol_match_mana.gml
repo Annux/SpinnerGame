@@ -11,6 +11,7 @@ repeat(matches)
     
     with(symbols[i])
         {
+        scr_symbol_set_active(id,false)
         var obj = global.manaBar[global.turn,type]
         var xx = scr_manabar_get_endx(obj)
         if (instance_exists(obj))
@@ -20,5 +21,7 @@ repeat(matches)
         }
     i += 1;
     }
+    
+
 
 

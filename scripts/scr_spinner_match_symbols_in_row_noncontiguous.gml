@@ -18,7 +18,7 @@ for (var i=0; i<numberOfColumns - 1; i+=1)
     var symbol2 = symbolObject[i+1, row];
 
     //test the match between the symbols
-    if (symbol1.canMatch && symbol1.state == symbol2.state)
+    if (symbol1.canMatch && symbol2.canMatch && symbol1.state == symbol2.state)
         {
         //add the symbols to the matched array
         var array_pos = array_length_2d(symbol_array,j) - 1;
@@ -42,6 +42,7 @@ for (var i=0; i<numberOfColumns - 1; i+=1)
    
 if (didMatch)
     {
+    symbolCollectionDelay = symbolCollectionDelayDefault;
     var q = 0;//index to check
     repeat(array_height_2d(symbol_array))
         {    
@@ -65,6 +66,8 @@ if (didMatch)
     }
 else
     {
+    symbolCollectionDelay = 1;
+    matchEndDelay = 1;
     show_debug_message("Nothing in row: " + string(row))
     }
     

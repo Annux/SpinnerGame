@@ -79,7 +79,8 @@ for (var r=0; r<numberOfRows; r+=1)
   symbol Collection
  ***************************************************/
  
-symbolCollectionDelay = 10;
+symbolCollectionDelayDefault = 10;
+symbolCollectionDelay = symbolCollectionDelayDefault;
 matchEndDelay = 0;
 current_match_row = 0;
 canMatch = true;

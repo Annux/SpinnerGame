@@ -25,5 +25,11 @@ if(theSymbol != noone)
 {
      // add the symbol that dropped out of the slot to the STOCK
     scr_symbol_move_out_of_spinner(theSymbol,symbolStockList[theColumn],true)
-    // remove it from the slot (deactivate it)
+    //re-activate the symbol
+    scr_symbol_set_active(theSymbol, true);
+    // updates the symbol's state
+    with(theSymbol)
+    {
+        scr_symbol_get_status_effect_info(status_effect)
+    }   
 }
