@@ -239,6 +239,8 @@
         <scripts name="Shatter">
           <script>scripts\scr_spell_shatter_create.gml</script>
           <script>scripts\scr_spell_shatter.gml</script>
+          <script>scripts\scr_shatter_timer_create.gml</script>
+          <script>scripts\scr_shatter_timer_alarm.gml</script>
         </scripts>
         <scripts name="Smoke bomb">
           <script>scripts\scr_spell_smoke_bomb_create.gml</script>
@@ -265,12 +267,14 @@
       <scripts name="Symbols">
         <script>scripts\scr_symbol_change_state.gml</script>
         <script>scripts\scr_symbol_create_new_symbol.gml</script>
+        <script>scripts\scr_symbol_step.gml</script>
         <script>scripts\scr_symbol_move_out_of_spinner.gml</script>
         <script>scripts\scr_symbol_move_into_spinner.gml</script>
         <script>scripts\scr_symbol_change_status_effect.gml</script>
         <script>scripts\scr_symbol_get_state_information.gml</script>
         <script>scripts\scr_symbol_draw.gml</script>
         <script>scripts\scr_symbol_on_spin_activate.gml</script>
+        <script>scripts\scr_symbol_set_active.gml</script>
         <scripts name="Matching">
           <script>scripts\scr_symbol_match_null.gml</script>
           <scripts name="Mana">
@@ -374,6 +378,7 @@
       <objects name="particals">
         <object>objects\obj_smoke_cloud_partical</object>
       </objects>
+      <object>objects\obj_shatter_timer</object>
     </objects>
   </objects>
   <rooms name="rooms">
