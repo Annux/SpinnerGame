@@ -2,6 +2,8 @@ i = curStoppingColumn;
 colState[i] = 1;
 resetAlarm = false;
 
+show_debug_message("entered alarm")
+
 if(global.turn == 1)
 {
     curStoppingColumn++;
@@ -9,6 +11,7 @@ if(global.turn == 1)
     {
         i++;
         resetAlarm = true;
+        show_debug_message("can reset alarm")
     }
 }
 else
@@ -18,6 +21,7 @@ else
     {
         i = numberOfColumns - i;
         resetAlarm = true;
+        show_debug_message("can reset alarm")
     }
 }
 

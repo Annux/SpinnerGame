@@ -12,6 +12,7 @@ repeat(matches)
     with(symbols[i])
         {
         scr_symbol_set_active(id,false)
+        burst_scale = 0.8
         var obj = global.manaBar[global.turn,type]
         var xx = scr_manabar_get_endx(obj)
         if (instance_exists(obj))

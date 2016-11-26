@@ -20,11 +20,15 @@ with(obj)
     status_effect = symbol_status_effect.normal;
     scr_symbol_get_status_effect_info(status_effect)
     
+    
     active = true;
     fade_alpha = 0;
     fade_alpha_target = 0;
     fade_alpha_smoothing = 4;
-      
+    
+    burst_scale = 0;  
+    burst_scale_target = 0;
+    burst_scale_smoothing = 4;
     }
     
 return obj;

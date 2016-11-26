@@ -291,6 +291,12 @@
                 <script>scripts\scr_mana_particle_trail_step.gml</script>
               </scripts>
             </scripts>
+            <scripts name="ManaGainText">
+              <script>scripts\scr_mana_gain_text_create_new.gml</script>
+              <script>scripts\scr_mana_gain_text_draw.gml</script>
+              <script>scripts\scr_mana_gain_text_step.gml</script>
+              <script>scripts\scr_mana_gain_text_alarm.gml</script>
+            </scripts>
           </scripts>
         </scripts>
         <scripts name="Stop on screen">
@@ -317,6 +323,7 @@
     <font>fonts\font_MainMenu</font>
     <font>fonts\font_toolTip</font>
     <font>fonts\font_manabar</font>
+    <font>fonts\font_mana_gain</font>
   </fonts>
   <objects name="objects">
     <objects name="Managers">
@@ -363,6 +370,7 @@
           <objects name="ManaParticals">
             <object>objects\obj_mana_particle</object>
             <object>objects\obj_mana_particle_trail</object>
+            <object>objects\obj_mana_gain_text</object>
           </objects>
         </objects>
         <object>objects\obj_actioncoin</object>
