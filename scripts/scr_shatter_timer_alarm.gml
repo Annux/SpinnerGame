@@ -4,7 +4,7 @@ with (instance_find(obj_spinner_machine,0))
         {
         scr_spinner_match_symbols_in_row_noncontiguous(q)
         }
-    scr_deduct_action();
+    scr_end_action()
     }
     
 

@@ -1,3 +1,3 @@
 size = 1
-shrink_speed = 0.05
+shrink_speed = 0.025
 

@@ -42,6 +42,7 @@
           <sprite>sprites\spr_BlueSpinIcon</sprite>
           <sprite>sprites\spr_WildSpinIcon</sprite>
           <sprite>sprites\spr_ShieldSpinIcon</sprite>
+          <sprite>sprites\spr_SwordSpinIcon</sprite>
           <sprite>sprites\spr_BombSpinIcon</sprite>
           <sprite>sprites\spr_DamageSpinIcon</sprite>
           <sprites name="status effects">
@@ -156,6 +157,7 @@
             <script>scripts\scr_spell_button_released.gml</script>
             <script>scripts\scr_spell_button_pressed.gml</script>
             <script>scripts\scr_spell_button_draw.gml</script>
+            <script>scripts\scr_spell_button_step.gml</script>
           </scripts>
         </scripts>
       </scripts>
@@ -202,6 +204,7 @@
           <script>scripts\scr_spinner_shift.gml</script>
           <script>scripts\scr_spinner_draw.gml</script>
           <script>scripts\scr_return_random_symbol_on_screen.gml</script>
+          <script>scripts\scr_spinner_set_pre_match_delay.gml</script>
         </scripts>
       </scripts>
       <scripts name="Spells">
@@ -262,6 +265,7 @@
       <scripts name="Game Manager">
         <script>scripts\scr_game_switch_turns.gml</script>
         <script>scripts\scr_deduct_action.gml</script>
+        <script>scripts\scr_end_action.gml</script>
         <script>scripts\scr_Global_Variables.gml</script>
       </scripts>
       <scripts name="Symbols">
@@ -290,6 +294,7 @@
                 <script>scripts\scr_mana_particle_trail_create.gml</script>
                 <script>scripts\scr_mana_particle_trail_step.gml</script>
               </scripts>
+              <script>scripts\scr_mana_particle_burst.gml</script>
             </scripts>
             <scripts name="ManaGainText">
               <script>scripts\scr_mana_gain_text_create_new.gml</script>
@@ -301,6 +306,7 @@
         </scripts>
         <scripts name="Stop on screen">
           <script>scripts\scr_symbol_stop_on_screen_null.gml</script>
+          <script>scripts\sc_symbol_stop_on_screen_sword_scatter.gml</script>
           <script>scripts\scr_symbol_stop_on_screen_smoke.gml</script>
         </scripts>
         <scripts name="status effect">
@@ -309,8 +315,11 @@
         </scripts>
       </scripts>
       <scripts name="DragAndDrop">
-        <script>scripts\scr_dragAndDrop.gml</script>
-        <script>scripts\scr_dragAndDropCreate_example.gml</script>
+        <script>scripts\scr_dragAndDrop_create.gml</script>
+        <script>scripts\scr_dragAndDrop_step.gml</script>
+        <script>scripts\scr_dragAndDrop_add_hover_script.gml</script>
+        <script>scripts\scr_dragAndDrop_add_drop_script.gml</script>
+        <script>scripts\scr_dragAndDrop_set_returnToStart.gml</script>
       </scripts>
       <scripts name="Actionbar">
         <script>scripts\scr_actionbar_create.gml</script>
@@ -330,6 +339,7 @@
       <object>objects\obj_orientation_manager</object>
       <object>objects\obj_game_manager</object>
       <object>objects\obj_button_parent</object>
+      <object>objects\obj_deltaTime</object>
     </objects>
     <objects name="MainMenu">
       <object>objects\obj_classSelect</object>
@@ -383,10 +393,10 @@
       <object>objects\obj_bombSpell</object>
       <object>objects\obj_bomb</object>
       <object>objects\obj_smoke_bomb</object>
+      <object>objects\obj_shatter_timer</object>
       <objects name="particals">
         <object>objects\obj_smoke_cloud_partical</object>
       </objects>
-      <object>objects\obj_shatter_timer</object>
     </objects>
   </objects>
   <rooms name="rooms">

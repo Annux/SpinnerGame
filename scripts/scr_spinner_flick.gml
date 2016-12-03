@@ -6,8 +6,8 @@ if (position_meeting(mouse_x,mouse_y,self) && mouse_check_button_pressed(mb_left
     grabbedSpinner = true;
     inPosition = false;
     yOffset = y - mouse_y; // the offset position of where the player clicked
+    prevMouseY = origMouseY;
     origMouseY = mouse_y;
-    prevMouseY = mouse_y;
     
     var closestColDist = room_width;
     closestCol = 0;
@@ -30,22 +30,24 @@ else if(!grabbedSpinner && !inPosition) // reset the slots if the player lets go
 // -------- HOLDING & DRAGGING -------//
 ////////////////////////////////////////
 // while the player is holding/dragging the spinner
-if(grabbedSpinner)
+if(grabbedSpinner && !global.actionActive )
 {
     var distanceFlicked = mouse_y - prevMouseY;
     // BEGINNING THE 'SPINNING' STATE //
-    if (mouse_check_button_released(mb_left) || mouse_y > bottomLimit) // if they let go, reset to middle
+    if (mouse_check_button(mb_left) ) // if they let go, reset to middle
     {
         if(distanceFlicked > startSpinSpeed)
         {
             scr_spinner_begin_spinning(distanceFlicked);
             grabbedSpinner = false;
         }
-        else
-        {
-            grabbedSpinner = false;
-        }
+    
     }
+    if (mouse_check_button_released(mb_left))
+        {
+        grabbedSpinner = false;
+        prevMouseY = y
+        }
     // DRAGGING TOO FAR UP //
     else if (mouse_y + yOffset < topLimit) 
     {

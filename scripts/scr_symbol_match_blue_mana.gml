@@ -10,9 +10,10 @@ show_debug_message(string(matches) + " Blues");
 
 var total_x = 0;
 var i = 0;
+var value = 0;
 repeat(matches)
     {
-    var value = global.mana_gain[i];
+    value += global.mana_gain[i];
    
     total_x += symbols[i].x;
     ++i

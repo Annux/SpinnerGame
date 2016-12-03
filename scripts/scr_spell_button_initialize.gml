@@ -1,6 +1,7 @@
 ///This script populates the spell button with the spell-specific information
 var buttonInstance = argument[0];
 var spellType = argument[1];
+var spelltarget = obj_spinner_machine;
 
 with(buttonInstance)
 {
@@ -17,6 +18,7 @@ with(buttonInstance)
             break;
         case (spell.shatter):
             scr_spell_shatter_create();
+            var spelltarget = obj_symbol;
             break;
             
         case (spell.zap):
@@ -39,4 +41,6 @@ with(buttonInstance)
             scr_spell_manabomb_create();
             break;
     }
+    
+    scr_dragAndDrop_add_drop_script(spellScript,spelltarget)
 }

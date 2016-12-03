@@ -43,5 +43,12 @@ switch(state)
     matchAction = scr_symbol_match_null;
     stop_on_screen = scr_symbol_stop_on_screen_null;
     break;
+    
+    case symbolState.sword:
+    sprite_index = spr_SwordSpinIcon;
+    canMatch = false;
+    matchAction = scr_symbol_match_null;
+    stop_on_screen = sc_symbol_stop_on_screen_sword_scatter;
+    break;
     }
 

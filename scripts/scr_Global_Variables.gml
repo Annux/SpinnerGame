@@ -6,6 +6,8 @@ global.ManaColor[manaType.purple]= $c73d8e;
 global.ManaColor[manaType.red]   = $3737f5;
 global.scatterActive = 0; //for when a scatter symbol is placed. 0 = not active, 1 = active, 2 = active and the slot machine has moved at least once.
 
+global.actionActive = false;
+
 // PLAYER HUD //
 global.numSpellButtons = 4; // the number of spells a character can cast
 global.numManaBars = global.manaTypes; // the amount of mana bars on the player hud
@@ -25,6 +27,8 @@ global.mana_gain[1] = 1;
 global.mana_gain[2] = 2;
 global.mana_gain[3] = 4;
 global.mana_gain[4] = 8;
+
+global.delta = 1;
 
 // TURN SYMBOLS //
 // TODO: instanciate the symbols somewhere else, store a reference to them here in an array

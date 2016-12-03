@@ -18,4 +18,4 @@ while (bombs > 0)
         }
     }
 
-scr_deduct_action();
+scr_end_action()

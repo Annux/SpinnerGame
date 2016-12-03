@@ -13,7 +13,7 @@
     spinDuration[4] = .5;
     spinDelayPrCol = .333; // the amount of time increase between each columns stop time
     
-    startSpinSpeed = 30; // the speed the spinner must reach in order to spin
+    startSpinSpeed = 120 * (room_height / window_get_height()); // the speed the spinner must reach in order to spin
     maxSpinSpeed = 300; // the speed of the spinning animation at the peak of the animation
     spinAccel = 3.5; // rate of acceleration
     
@@ -33,6 +33,7 @@
     spinGravityDecay = .4; // the speed at which the slot gyro slows down after a spin
     
     columnDrag = .8 // NOTE: THIS MUST BE > 0
+    origMouseY = mouse_y;
     
 ///////////////////////// SYMBOLS/////////////////////////
 //////////////////////////////////////////////////////////
@@ -74,12 +75,21 @@ for (var r=0; r<numberOfRows; r+=1)
     midSpinMatches[r] = 0;
 };
 
+/***************************************************
+  Scatter Matching
+ ***************************************************/
+
+for(var i = 0; i < numberOfColumns; i+=1)
+    { 
+    canStopOnScreenAction[i] = 1;
+    }
+preMatchDelay = 0;
     
 /***************************************************
   symbol Collection
  ***************************************************/
  
-symbolCollectionDelayDefault = 10;
+symbolCollectionDelayDefault = room_speed * 0.4;
 symbolCollectionDelay = symbolCollectionDelayDefault;
 matchEndDelay = 0;
 current_match_row = 0;

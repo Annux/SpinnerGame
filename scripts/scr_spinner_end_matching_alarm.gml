@@ -1,1 +1,1 @@
-scr_deduct_action()
+scr_end_action()

@@ -17,4 +17,6 @@ pos = 0
 
 done = false;
 
+rotSpeed = random_range(4,-4)
+
 

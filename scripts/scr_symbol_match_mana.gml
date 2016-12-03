@@ -18,6 +18,7 @@ repeat(matches)
         if (instance_exists(obj))
             {
             scr_mana_particle_create_new(x,y,xx,obj.y,type,value,value * 60)
+            scr_mana_particle_burst(x,y,8,type)
             }
         }
     i += 1;

@@ -8,6 +8,7 @@ if(buttonActivated && global.actionsEnabled)
 // Debug - Debug - Debug //
     global.actionsEnabled = false; // deactivate action use until this action has been completed
     
+    scr_deduct_action()
     script_execute(spellScript); // run the spell-specific script
     // deduct the mana cost from the player's mana pool
     for(var i = 0; i < global.manaTypes; i++)

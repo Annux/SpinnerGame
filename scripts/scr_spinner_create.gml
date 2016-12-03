@@ -15,7 +15,7 @@ enum symbolState
     green,
     purple,
     wild,
-    test
+    sword
     }
     
 enum symbol_status_effect
@@ -42,8 +42,9 @@ for(var i = 0; i < numberOfColumns; i++)
         var rd = scr_symbol_create_new_symbol(symbolState.red)
         var gr = scr_symbol_create_new_symbol(symbolState.green)
         var pr = scr_symbol_create_new_symbol(symbolState.purple)
+        var sw = scr_symbol_create_new_symbol(symbolState.sword)
         
-        ds_list_add(spinnerList[i],bl,rd,gr,pr);
+        ds_list_add(spinnerList[i],bl,rd,gr,pr,sw);
 
     }
 

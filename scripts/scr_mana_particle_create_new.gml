@@ -29,7 +29,7 @@ repeat(val)
         dist_x = target_x - x;
         dist_y = target_y - y;
         
-        smoothing = random_range(2,4);
+        smoothing = random_range(4,8);
         
         pos = 0
         }    

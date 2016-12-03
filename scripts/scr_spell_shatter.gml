@@ -1,6 +1,6 @@
-///scr_spell_shatter(Symbole state)
-//var target_state = argument0;
-var target_state = symbolState.blue;
+///scr_spell_shatter(Symbole)
+var obj = argument0
+var target_state = obj.state;
 with(instance_find(obj_spinner_machine, 0))
 {
     var Destroyed = 0;

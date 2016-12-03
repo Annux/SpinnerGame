@@ -36,24 +36,37 @@ for(var i = 0; i < numberOfColumns; i++)
         case 3:
             scr_spin_end(i);
             allRowsStopped = false;
+            canStopOnScreenAction[i] = 1;
             break;
         // stopped
         case 4:
-            for(var j = 0; j < numberOfRows; j++)
+            if (canStopOnScreenAction[i] == 1)
             {
-                var symbol = symbolObject[i,j];
-                scr_symbol_stop_on_screen_activate(symbol);                
+                for(var j = 0; j < numberOfRows; j++)
+                {
+                    var symbol = symbolObject[i,j];
+                    canStopOnScreenAction[i] = 0;
+                    scr_symbol_stop_on_screen_activate(symbol);                
+                };
             }
             break;
         default:
             show_debug_message("Error handling for scr_spinner_spin?");
             break;
             
-    }
-}
+    };
+};
 
 
 if(allRowsStopped)
 {
-    scr_spinner_start_checking_matches();
-}
+    if (preMatchDelay <= 0)
+    {
+        global.actionActive = false;
+        scr_spinner_start_checking_matches();
+    }
+    else
+    {
+        preMatchDelay -= 1 * global.delta
+    }
+};

@@ -13,6 +13,8 @@ for(var i = 0; i < numberOfColumns; i++)
     }
 }
 
+scr_deduct_action()
+
 // this alarm will tell the 'curStoppingColumn' to start slowing down to a stop, then set the alarm for the next column
 alarm[0] = spinDuration[0]*room_speed;
 // The first column to stop for P1 is the leftmost column

@@ -2,7 +2,7 @@ var z = sin(pi * pos) * -arc
 x = start_x + (dist_x * pos)
 y = start_y + (dist_y * pos) + z
 
-image_angle = image_angle+3
+image_angle = image_angle+rotSpeed
 
 if (pos >= 1)
     {
