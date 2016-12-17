@@ -13,6 +13,10 @@ for(var i = 0; i < numberOfColumns; i++)
     }
 }
 
+scr_spinner_footprint_create_footprint_string(0)
+scr_spinner_footprint_create_footprint_string(1)
+//scr_spinner_parse_footprint()
+
 scr_deduct_action()
 
 // this alarm will tell the 'curStoppingColumn' to start slowing down to a stop, then set the alarm for the next column

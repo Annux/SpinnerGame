@@ -1,7 +1,6 @@
 {    
     myChar = instance_create(x, y, obj_player_character);
     myChar.image_xscale *= -1;
-    global.ballSack = "Dustin"; //The tale of the small ballSack adventurer that CAME to BC for a SHOT at better things.
     
     hudX = x - (sprite_width / 3)
     bannerY = y + (sprite_height / 4)

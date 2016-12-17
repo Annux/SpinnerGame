@@ -6,6 +6,9 @@ for(var i = 0; i < global.manaTypes; i++)
 {
     spellCost[i] = 0;
 }
+
+scr_dragAndDrop_add_drop_script(spellScript,obj_spinner_machine)
+
 spellCost[manaType.red] = 3;
 spellCost[manaType.green] = 1;
 

@@ -98,7 +98,6 @@
           <sprite>sprites\spr_smoke_bomb</sprite>
           <sprite>sprites\spr_smoke_partical</sprite>
         </sprites>
-        <sprite>sprites\spr_win_lose</sprite>
       </sprites>
       <sprite>sprites\spr_back_button</sprite>
     </sprites>
@@ -182,6 +181,14 @@
           <script>scripts\scr_spinner_reset.gml</script>
           <script>scripts\scr_spinner_move.gml</script>
           <script>scripts\scr_spinner_begin_spinning.gml</script>
+          <scripts name="Footprint">
+            <script>scripts\scr_spinner_parse_footprint.gml</script>
+            <script>scripts\scr_spinner_footprint_create_footprint_string.gml</script>
+            <script>scripts\scr_spinner_footprint_create_symbol_stat_system.gml</script>
+            <script>scripts\scr_spinner_footprint_add_symbol_stat.gml</script>
+            <script>scripts\scr_spinner_footprint_set_symbol_stat.gml</script>
+            <script>scripts\scr_spinner_footprint_variables.gml</script>
+          </scripts>
         </scripts>
         <scripts name="state 1(moving)">
           <script>scripts\scr_spinner_spin.gml</script>
@@ -326,10 +333,9 @@
         <script>scripts\scr_actionbar_create.gml</script>
         <script>scripts\scr_actioncoin_animation.gml</script>
       </scripts>
-      <scripts name="Win/Lose">
-        <script>scripts\scr_win.gml</script>
-        <script>scripts\scr_lose.gml</script>
-      </scripts>
+    </scripts>
+    <scripts name="Utility">
+      <script>scripts\scr_get_weighted_index.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -389,9 +395,6 @@
           </objects>
         </objects>
         <object>objects\obj_actioncoin</object>
-      </objects>
-      <objects name="win/lose">
-        <object>objects\obj_win_lose</object>
       </objects>
     </objects>
     <objects name="Spells">

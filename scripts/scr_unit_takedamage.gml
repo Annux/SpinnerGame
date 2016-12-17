@@ -32,19 +32,4 @@ with(target)
         }
         // heal animation/sound/etc
     }
-    
-    //win/lose the game
-    if (myHUD.healthBar.curHP <= 0)
-    {
-    instance_create(room_width/2, room_height/2,obj_win_lose)
-        if (target = global.player[1])
-        {
-            obj_win_lose.image_index = 1;
-        }
-        if (target = global.player[2])
-        {
-            obj_win_lose.image_index = 0;
-        }
-    }
 }
-
