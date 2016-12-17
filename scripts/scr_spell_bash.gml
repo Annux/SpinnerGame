@@ -16,6 +16,5 @@ reds = global.bashDamage;
 global.bashDamage /= 9;
 damageVal = 10 + power(10, (1+global.bashDamage)) + 3 * reds;
 bash.damageVal = damageVal;
-show_debug_message(damageVal);
-global.bashDamage = 0;
-show_debug_message(global.bashDamage);
+global.bashDamage = 0
+//I love you;
