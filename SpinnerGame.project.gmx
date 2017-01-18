@@ -31,7 +31,7 @@
     <sprite>sprites\spr_toolTip</sprite>
     <sprite>sprites\spr_back_button</sprite>
     <sprites name="Class Selection Sprites">
-      <sprite>sprites\spr_classSelect</sprite>
+      <sprite>sprites\spr_character_select</sprite>
       <sprite>sprites\spr_button</sprite>
     </sprites>
     <sprites name="Game Sprites">

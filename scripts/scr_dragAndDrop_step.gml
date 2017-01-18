@@ -38,7 +38,7 @@ if (mouse_check_button_released(mb_left))
         obj = collision_point(x,y,drop_objects[i],true,true)
         if (obj != noone)
         {
-            script_execute(drop_scripts[i],obj);
+            script_execute(drop_scripts[i],obj); // run the spell-specific script
             event_user(0);
         }
     ++i;

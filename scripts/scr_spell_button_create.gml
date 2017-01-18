@@ -27,8 +27,6 @@ else
     endingRot = startingRot - (180 - 45);
 }
 rotPerDot = (endingRot - startingRot) / global.manaTypes;
-show_debug_message("rot goes from " + string(startingRot) + " to " + string(endingRot));
-show_debug_message("rot per dot is " + string(rotPerDot));
 
 for(var i = 0; i < global.manaTypes; i++)
 {

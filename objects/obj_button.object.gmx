@@ -90,48 +90,6 @@
         </arguments>
       </action>
     </event>
-    <event eventtype="6" enumb="53">
-      <action>
-        <libid>1</libid>
-        <id>601</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_execute_script</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>9</kind>
-            <script>scr_button_pressed</script>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="6" enumb="7">
       <action>
         <libid>1</libid>
@@ -189,23 +147,68 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(instance_exists(obj_classSelect))
+            <string>global.playerClass = class.warrior;
+if(instance_exists(obj_classSelect))
 {
     switch (obj_classSelect.image_index) //set the class
     {
-        case 0: global.playerClass = class.acolyte
+        case 0: global.playerClass = class.warrior;
                 break;
-        case 1: global.playerClass = class.thief
+        case 1: global.playerClass = class.wizard;
                 break;
-        case 2: global.playerClass = class.warrior
+        case 2: global.playerClass = class.acolyte;
                 break;
-        case 3: global.playerClass = class.wizard
+        case 3: global.playerClass = class.thief;
                 break;
     }
 }
+else
+    global.playerClass = class.warrior;
 
 room_goto(InGame_Screen); //Start Game
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>601</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>9</kind>
+            <script>scr_button_pressed</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>

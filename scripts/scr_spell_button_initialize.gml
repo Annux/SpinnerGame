@@ -47,4 +47,5 @@ with(buttonInstance)
     }
     
     scr_dragAndDrop_add_drop_script(spellScript,spelltarget)
+    scr_dragAndDrop_add_drop_script(scr_spell_button_released,spelltarget)
 }
