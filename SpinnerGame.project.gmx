@@ -118,6 +118,8 @@
         <sprite>sprites\spr_particleLighting</sprite>
         <sprite>sprites\spr_lightingEffect</sprite>
         <sprite>sprites\spr_smoke_particle</sprite>
+        <sprite>sprites\sp_swordImpact</sprite>
+        <sprite>sprites\sp_swordSlash</sprite>
       </sprites>
     </sprites>
   </sprites>
@@ -253,6 +255,10 @@
           <script>scripts\scr_spell_bash_create.gml</script>
           <script>scripts\scr_spell_bash.gml</script>
           <script>scripts\scr_bash_alarm0.gml</script>
+          <scripts name="particles">
+            <script>scripts\scr_swordImpact_create.gml</script>
+            <script>scripts\scr_swordImpact_step.gml</script>
+          </scripts>
         </scripts>
         <scripts name="Mana Bomb">
           <script>scripts\scr_spell_manabomb_create.gml</script>
@@ -431,6 +437,9 @@
       <object>objects\obj_shatter_timer</object>
       <objects name="particals">
         <object>objects\obj_smoke_cloud_partical</object>
+        <object>objects\obj_sword_effects</object>
+        <object>objects\obj_swordImpact</object>
+        <object>objects\obj_swordSlash</object>
       </objects>
     </objects>
   </objects>
