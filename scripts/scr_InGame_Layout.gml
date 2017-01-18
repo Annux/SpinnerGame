@@ -46,5 +46,5 @@
     // Create the slot machine
     objectArray[3] = instance_create(centerX, SpinnerY, obj_spinner_machine);
     global.spinnerMachine = objectArray[3]
-}
+    }
 
