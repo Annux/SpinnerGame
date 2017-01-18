@@ -293,11 +293,11 @@
             </scripts>
           </scripts>
         </scripts>
-        <script>scripts\scr_null.gml</script>
-        <script>scripts\scr_on_spinner_end_null.gml</script>
         <scripts name="Shield">
           <script>scripts\scr_spell_shield_create.gml</script>
         </scripts>
+        <script>scripts\scr_null.gml</script>
+        <script>scripts\scr_on_spinner_end_null.gml</script>
       </scripts>
       <scripts name="Game Manager">
         <script>scripts\scr_game_switch_turns.gml</script>

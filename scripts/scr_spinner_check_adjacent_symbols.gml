@@ -15,11 +15,6 @@ for(var j = 0; j < numberOfRows; j++)
             {
             midSpinMatches[j] = 0;
             }
-        if (highest_match > 0)
-            {
-            audio_sound_pitch(snd_match_hit,1 + (highest_match / 5));   
-            audio_play_sound(snd_match_hit,1,false);
-            }
         }
         
     repeat(numberOfRows)
