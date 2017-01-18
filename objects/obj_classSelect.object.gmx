@@ -26,16 +26,11 @@
           <argument>
             <kind>1</kind>
             <string>/// custom rescale
-if(room_width &gt; room_height)
-{
-    image_xscale = room_width * image_xscale / sprite_width;
-    image_yscale = image_xscale;
-}
-else
-{
-    image_xscale = room_height * image_xscale / sprite_height;
-    image_yscale = image_xscale;
-}
+scaleToWidth = room_width / sprite_get_width(sprite_index);
+scaleToHeight = room_height/ sprite_get_height(sprite_index);
+
+image_xscale = min(scaleToWidth, scaleToHeight);
+image_yscale = min(scaleToWidth, scaleToHeight);
 </string>
           </argument>
         </arguments>
