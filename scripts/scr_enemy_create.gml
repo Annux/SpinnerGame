@@ -1,14 +1,6 @@
 {    
-    global.ballSack = "Dustin"; //The tale of the small ballSack adventurer that CAME to BC for a SHOT at better things.
-    
-    myChar = instance_create(x, y, obj_player_character);
-    myChar.image_xscale *= -1;
-<<<<<<< Updated upstream
-=======
-    origX = x;
-    origY = y;
-    shakeTimer = 0;
->>>>>>> Stashed changes
+    myAvatar = instance_create(x, y, obj_player_avatar);
+    myAvatar.image_xscale *= -1;
     
     hudX = x - (sprite_width / 3)
     bannerY = y + (sprite_height / 4)
@@ -37,7 +29,7 @@
             break;
     }
     
-    ////////////////
+    //////////////////////
     // BASE STATS //
     playerNumber = 2;
     myHUD.healthBar.curHP = myHUD.healthBar.maxHP;
@@ -45,4 +37,16 @@
     {
         myHUD.manaBar[n].maxMana = 50;
     }
+    
+    ////////////////////
+    // ANIMATION //
+    curTimer = 0;
+    
+    // shake animation
+    isShaking = false;
+    shakeDuration = .4 * room_speed;
+    shakeIntensity = 0; // the shake intensity is equal to the amount of damage received * the shake modifier
+    shakeMod = .6;
+    initX = x;
+    initY = y;
 }

@@ -6,10 +6,7 @@ for(var i = 0; i < global.manaTypes; i++)
 {
     spellCost[i] = 0;
 }
-
-scr_dragAndDrop_add_drop_script(spellScript,obj_spinner_machine)
-
-spellCost[manaType.red] = 3;
-spellCost[manaType.green] = 1;
+spellCost[manaType.purple] = 8;
+spellCost[manaType.green] = 5;
 
 spellEffectDur = 2 * room_speed;

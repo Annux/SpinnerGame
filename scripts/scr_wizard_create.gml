@@ -1,7 +1,9 @@
-// Character Setup
-myChar.sprite_index = spr_Wizard;
-myChar.idleImg = 0;
-myChar.damageImg = 1;
+// Avatar Setup
+myAvatar.sprite_index = spr_Wizard_idle;
+myAvatar.sprite[animstate.idle] = spr_Wizard_idle;
+myAvatar.sprite[animstate.damaged] = spr_Wizard_damage;
+myAvatar.sprite[animstate.healed] = spr_Wizard_heal;
+myAvatar.sprite[animstate.won] = spr_Wizard_win;
 
 // HUD Setup
 myHUD.healthBar.maxHP = 75
@@ -11,7 +13,6 @@ myHUD.manaBar[manaType.green].curMana = 15;
 myHUD.manaBar[manaType.red].curMana = 10;
 
 // Spell Setup
-
 mySpell[0] = spell.fireball;
 mySpell[1] = spell.freeze;
 mySpell[2] = spell.manabomb;

@@ -1,22 +1,27 @@
-var object = argument0;
-var origX = argument1;
-var origY = argument2;
-var shakeRate = argument3;
-var timer = argument4;
+///scr_shake_object(initialX, initialY, intensity, currentDuration, totalDuration, doesDecay);
+// returns true if curShakeDur < totalDuration
+initialX  = argument[0];
+initialY  = argument[1];
+intensity = argument[2];
+currentDuration = argument[3];
+totalDuration = argument[4];
+doesDecay = argument[5];
 
-with(object)
+if(currentDuration >= totalDuration)
 {
-    timer -= 1;
-    if(timer > 0)
-    {
-        x = random_range(x - shakeRate, x + shakeRate);
-        y = random_range(y - shakeRate, y + shakeRate);
-    }
-    else
-    {
-        x = origX;
-        y = origY;
-    }
+    x = initialX;
+    y = initialY;
+    return false;
+}
+else
+{
+    if(doesDecay)
+        intensity = lerp(intensity, 0, currentDuration/totalDuration); // reduce intensity over duration of animation
+
+        
+    // place thing in a random position
+    x = random_range(initialX - intensity, initialX + intensity);
+    y = random_range(initialY - intensity, initialY + intensity);
     
-    return timer;
+    return true;
 }

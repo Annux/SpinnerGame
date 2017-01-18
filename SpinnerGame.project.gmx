@@ -29,7 +29,11 @@
   <sprites name="sprites">
     <sprite>sprites\spr_infobar_thing</sprite>
     <sprite>sprites\spr_toolTip</sprite>
-    <sprite>sprites\spr_button</sprite>
+    <sprite>sprites\spr_back_button</sprite>
+    <sprites name="Class Selection Sprites">
+      <sprite>sprites\spr_classSelect</sprite>
+      <sprite>sprites\spr_button</sprite>
+    </sprites>
     <sprites name="Game Sprites">
       <sprites name="Spinner">
         <sprite>sprites\spr_Spinner_BG</sprite>
@@ -73,11 +77,14 @@
         </sprites>
         <sprites name="spell buttons">
           <sprite>sprites\spr_spellbutton</sprite>
-          <sprite>sprites\spr_spellcost_dot</sprite>
-          <sprite>sprites\spr_shatter</sprite>
+          <sprite>sprites\spr_shield</sprite>
+          <sprite>sprites\spr_swordstrike</sprite>
+          <sprite>sprites\spr_manacost_dot</sprite>
           <sprite>sprites\spr_bash</sprite>
-          <sprite>sprites\sp_smoke_bomb</sprite>
+          <sprite>sprites\spr_smoke_bomb</sprite>
+          <sprite>sprites\spr_tri_smoke_bomb</sprite>
           <sprite>sprites\spr_fireball</sprite>
+          <sprite>sprites\spr_shatter</sprite>
           <sprite>sprites\spr_freeze</sprite>
           <sprite>sprites\spr_zap</sprite>
           <sprite>sprites\spr_manabomb</sprite>
@@ -85,22 +92,33 @@
         </sprites>
       </sprites>
       <sprites name="Characters">
-        <sprites name="People">
-          <sprite>sprites\spr_Avatar</sprite>
+        <sprites name="Wizard">
+          <sprite>sprites\spr_Wizard_idle</sprite>
+          <sprite>sprites\spr_Wizard_damage</sprite>
+          <sprite>sprites\spr_Wizard_heal</sprite>
+          <sprite>sprites\spr_Wizard_win</sprite>
+          <sprite>sprites\spr_Wizard_lose</sprite>
+        </sprites>
+        <sprites name="Warrior">
+          <sprite>sprites\spr_Warrior_idle</sprite>
+          <sprite>sprites\spr_Warrior_damage</sprite>
+          <sprite>sprites\spr_Warrior_heal</sprite>
+          <sprite>sprites\spr_Warrior_win</sprite>
+          <sprite>sprites\spr_Warrior_lose</sprite>
+        </sprites>
+        <sprites name="Acolyte">
           <sprite>sprites\spr_Acolyte</sprite>
-          <sprite>sprites\spr_Wizard</sprite>
-          <sprite>sprites\spr_Warrior</sprite>
+        </sprites>
+        <sprites name="Thief">
           <sprite>sprites\spr_Thief</sprite>
-          <sprite>sprites\spr_classSelect</sprite>
         </sprites>
-        <sprites name="Spells">
-          <sprite>sprites\spr_particleLighting</sprite>
-          <sprite>sprites\spr_lightingEffect</sprite>
-          <sprite>sprites\spr_smoke_bomb</sprite>
-          <sprite>sprites\spr_smoke_partical</sprite>
-        </sprites>
+        <sprite>sprites\spr_Avatar</sprite>
       </sprites>
-      <sprite>sprites\spr_back_button</sprite>
+      <sprites name="Effects">
+        <sprite>sprites\spr_particleLighting</sprite>
+        <sprite>sprites\spr_lightingEffect</sprite>
+        <sprite>sprites\spr_smoke_particle</sprite>
+      </sprites>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -141,6 +159,11 @@
         </scripts>
         <script>scripts\scr_player_step.gml</script>
         <script>scripts\scr_unit_takedamage.gml</script>
+        <scripts name="Avatar">
+          <script>scripts\scr_avatar_create.gml</script>
+          <script>scripts\scr_set_animation_trigger.gml</script>
+          <script>scripts\scr_avatar_step.gml</script>
+        </scripts>
         <scripts name="HUD">
           <script>scripts\scr_HUD_create.gml</script>
           <script>scripts\scr_healthbar_variables.gml</script>
@@ -161,8 +184,8 @@
             <script>scripts\scr_spell_button_step.gml</script>
           </scripts>
           <scripts name="Spell Cost Dots">
-            <script>scripts\scr_spellcost_create.gml</script>
             <script>scripts\scr_spellcost_draw.gml</script>
+            <script>scripts\scr_spellcost_create.gml</script>
           </scripts>
         </scripts>
       </scripts>
@@ -186,14 +209,6 @@
           <script>scripts\scr_spinner_reset.gml</script>
           <script>scripts\scr_spinner_move.gml</script>
           <script>scripts\scr_spinner_begin_spinning.gml</script>
-          <scripts name="Footprint">
-            <script>scripts\scr_spinner_parse_footprint.gml</script>
-            <script>scripts\scr_spinner_footprint_create_footprint_string.gml</script>
-            <script>scripts\scr_spinner_footprint_create_symbol_stat_system.gml</script>
-            <script>scripts\scr_spinner_footprint_add_symbol_stat.gml</script>
-            <script>scripts\scr_spinner_footprint_set_symbol_stat.gml</script>
-            <script>scripts\scr_spinner_footprint_variables.gml</script>
-          </scripts>
         </scripts>
         <scripts name="state 1(moving)">
           <script>scripts\scr_spinner_spin.gml</script>
@@ -274,6 +289,9 @@
         </scripts>
         <script>scripts\scr_null.gml</script>
         <script>scripts\scr_on_spinner_end_null.gml</script>
+        <scripts name="Shield">
+          <script>scripts\scr_spell_shield_create.gml</script>
+        </scripts>
       </scripts>
       <scripts name="Game Manager">
         <script>scripts\scr_game_switch_turns.gml</script>
@@ -338,19 +356,10 @@
         <script>scripts\scr_actionbar_create.gml</script>
         <script>scripts\scr_actioncoin_animation.gml</script>
       </scripts>
-<<<<<<< Updated upstream
     </scripts>
-    <scripts name="Utility">
-      <script>scripts\scr_get_weighted_index.gml</script>
-=======
-      <scripts name="Win/Lose">
-        <script>scripts\scr_win.gml</script>
-        <script>scripts\scr_lose.gml</script>
-      </scripts>
-      <script>scripts\scr_find_my_player.gml</script>
-      <script>scripts\scr_shake_object.gml</script>
->>>>>>> Stashed changes
-    </scripts>
+    <script>scripts\scr_find_my_player.gml</script>
+    <script>scripts\scr_shake_object.gml</script>
+    <script>scripts\scr_anim_curve.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>
@@ -374,7 +383,7 @@
       <objects name="Players">
         <object>objects\obj_enemy</object>
         <object>objects\obj_player</object>
-        <object>objects\obj_player_character</object>
+        <object>objects\obj_player_avatar</object>
         <objects name="Banners">
           <object>objects\obj_banner_parent</object>
           <object>objects\obj_banner_blue</object>

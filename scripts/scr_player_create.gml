@@ -1,6 +1,6 @@
 // The Player creates a heirarchy of objects which all store references of their children and can be referenced in the following ways
 // player
-// -> myChar (the player character portrait)
+// -> myAvatar (the player character portrait)
 // -> myHUD (the health & mana bar frame)
 //      -> myHUD.healthBar
 //      -> myHUD.manaBar[1, 2, 3, 4]
@@ -8,11 +8,8 @@
 //      -> myBanner.spellButton[1, 2, 3, 4]
 
 {
-    myChar = instance_create(x, y, obj_player_character);
-    origX = x;
-    origY = y;
-    shakeTimer = 0;
-    
+    myAvatar = instance_create(x, y, obj_player_avatar);
+
     hudX = x + (sprite_width / 3)
     bannerY = y + (sprite_height / 4)
     
@@ -48,4 +45,16 @@
     {
         myHUD.manaBar[n].maxMana = 50;
     }
+    
+    ////////////////////
+    // ANIMATION //
+    curTimer = 0;
+    
+    // shake animation
+    isShaking = false;
+    shakeDuration = .4 * room_speed;
+    shakeIntensity = 0; // the shake intensity is equal to the amount of damage received * the shake modifier
+    shakeMod = .6;
+    initX = x;
+    initY = y;
 }

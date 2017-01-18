@@ -31,10 +31,6 @@ scr_spell_button_create();
 scr_dragAndDrop_create();
 
 scr_dragAndDrop_set_returnToStart(true,3);
-
-
-//TEMP STUFF
-image_speed = 0
 </string>
           </argument>
         </arguments>

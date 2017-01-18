@@ -20,6 +20,6 @@
   <width>186</width>
   <height>186</height>
   <frames>
-    <frame index="0">images\sp_smoke_bomb_0.png</frame>
+    <frame index="0">images\spr_tri_smoke_bomb_0.png</frame>
   </frames>
 </sprite>

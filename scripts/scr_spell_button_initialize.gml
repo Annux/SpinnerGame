@@ -1,6 +1,7 @@
 ///This script populates the spell button with the spell-specific information
 var buttonInstance = argument[0];
 var spellType = argument[1];
+var spelltarget = obj_spinner_machine;
 
 with(buttonInstance)
 {
@@ -13,7 +14,7 @@ with(buttonInstance)
             scr_spell_bash_create();
             break;
         case (spell.shield):
-            //scr_spell_bash_create();
+            scr_spell_shield_create();
             break;
         case (spell.shatter):
             scr_spell_shatter_create();
@@ -42,8 +43,8 @@ with(buttonInstance)
     }
     for(var i = 0; i < global.manaTypes; i++)
     {
-        spellCostDot[i].spellCost = spellCost[i];
+        spellCostDot[i].spellCost = spellCost[i]
     }
     
-    
+    scr_dragAndDrop_add_drop_script(spellScript,spelltarget)
 }

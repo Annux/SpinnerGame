@@ -12,11 +12,11 @@ if (!buttonEnabled)
     
 if (isClicked)
     {
-    scale_target = pickup_scale
+    scale_target = pickup_scale;
     }
 else
     {
-    scale_target = 1
+    scale_target = idle_scale;
     } 
     
-scale += (scale_target - scale ) / scale_smoothing;
+current_scale += (scale_target - current_scale ) / scale_smoothing;

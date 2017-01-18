@@ -11,10 +11,6 @@ ds_list_add(list, obj)
 if (reset)
     {
     obj.state = obj.deafultState;
-    with (obj)
-        {
-        scr_symbol_get_state_information(state)
-        }
     }
 
 

@@ -21,6 +21,7 @@ global.actionsEnabled = true;
 
 enum class {warrior, wizard, thief, acolyte};
 enum spell {swordstrike, bash, shield, shatter, zap, heal, fireball, freeze, manabomb, smoke_bomb};
+enum animstate {idle, damaged, healed, won, lost, attack, utility};
 
 global.mana_gain[0] = 1;
 global.mana_gain[1] = 1;

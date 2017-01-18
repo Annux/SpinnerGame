@@ -11,7 +11,7 @@ if (canDrag)
             script_execute(start_script);
             }
     }
-    }
+}
 var obj = noone;
 
 if (isClicked)
@@ -32,8 +32,6 @@ if (isClicked)
 
 if (mouse_check_button_released(mb_left))
 {
-    isClicked = false;
-    depth = origDepth;
     var i = 0;
     repeat(numberOfDropEntries)
     {
@@ -45,6 +43,8 @@ if (mouse_check_button_released(mb_left))
         }
     ++i;
     }
+    isClicked = false;
+    depth = initDepth;
 }
 
 

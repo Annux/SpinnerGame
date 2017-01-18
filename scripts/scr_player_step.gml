@@ -15,22 +15,17 @@ for(var spellindex = 0; spellindex < global.numSpellButtons; spellindex++)
         }
         myBanner.spellButton[spellindex].buttonEnabled = haveEnoughMana;
     }
-    else 
+    else
     {
         myBanner.spellButton[spellindex].buttonEnabled = false;
     }
 }
 
-// Check if Shaking
-
-if(shakeTimer > 0)
+// SHAKING
+if(isShaking == true)
 {
-    shakeTimer = scr_shake_object(self, origX, origY, 5, shakeTimer);
-    myChar.x = x;
-    myChar.y = y;
-    //scr_shake_object(myChar, origX, origY, 5, shakeTimer);
-    if(shakeTimer <= 0)
-    {
-        myChar.image_index = myChar.idleImg;
-    }
+    isShaking = scr_shake_object(initX, initY, shakeIntensity, curTimer, shakeDuration, true)
+    myAvatar.x = x;
+    myAvatar.y = y;
+    curTimer++;
 }

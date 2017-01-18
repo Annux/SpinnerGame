@@ -1,7 +1,9 @@
 // Character Setup
-myChar.sprite_index = spr_Thief;
-myChar.idleImg = 0;
-myChar.damageImg = 0;
+myAvatar.sprite_index = spr_Thief;
+myAvatar.sprite[animstate.idle] = spr_Wizard_idle;
+myAvatar.sprite[animstate.damaged] = spr_Wizard_damage;
+myAvatar.sprite[animstate.healed] = spr_Wizard_heal;
+myAvatar.sprite[animstate.won] = spr_Wizard_win;
 
 // HUD Setup
 myHUD.healthBar.maxHP = 100

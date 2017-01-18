@@ -1,6 +1,6 @@
 
 var bombs = 15;
-var overload = 0
+var overload = 0;
 
 while (bombs > 0)
     {

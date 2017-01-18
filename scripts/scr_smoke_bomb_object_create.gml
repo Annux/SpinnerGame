@@ -7,8 +7,8 @@ target_y = obj_spinner_machine.y;
 dist_x = target_x - x;
 dist_y = target_y - y;
 
-arc = 400;
-time = 1.5 * room_speed
+arc = 400 * global.size;
+time = 1.5 * room_speed;
 
 
 pos_sp = 1 / time

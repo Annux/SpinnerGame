@@ -104,24 +104,3 @@ for(var i = 0; i < numberOfColumns; i++)
         scr_spinner_move(i, j) // do the initial slot clear
     }
 }
-/***************************************************
-  Foot print setup
- ***************************************************/
-scr_spinner_footprint_create_symbol_stat_system()
-
-var i = 0;
-repeat(2)
-    {
-    scr_spinner_footprint_add_symbol_stat(i,symbolState.red,100,100,100,100,100)
-    scr_spinner_footprint_add_symbol_stat(i,symbolState.blue,100,100,100,100,100)
-    scr_spinner_footprint_add_symbol_stat(i,symbolState.green,100,100,100,100,100)
-    scr_spinner_footprint_add_symbol_stat(i,symbolState.purple,100,100,100,100,100)
-    ++i;
-    }
- 
-
-/***************************************************
-  For all you probibility needs see scr_spinner_footprint_variables
- ***************************************************/
- 
-scr_spinner_footprint_variables() // press f12 to open

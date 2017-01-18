@@ -10,45 +10,31 @@ with(target)
         if(myHUD.healthBar.curHP > amount)
         {
             myHUD.healthBar.curHP -= amount;
+            scr_set_animation_trigger(myAvatar, myAvatar.sprite[animstate.damaged], myAvatar.animDuration);
         }
         else
         {
             myHUD.healthBar.curHP = 0;
+            scr_set_animation_trigger(myAvatar, myAvatar.sprite[animstate.lost], -1);
         }
-        myChar.image_index = myChar.damageImg;
-        shakeTimer = 10;
-        // damage animation/sound/etc
+        // start the shaker
+        isShaking = true;
+        shakeIntensity = amount*shakeMod;
+        curTimer = 0;
     }
-    
     // Healing
     else if(amount < 0)
     {
         // don't overheal
         if(myHUD.healthBar.maxHP - myHUD.healthBar.curHP > amount)
         {
-            myHUD.healthBar.curHP -= amount;    
+            myHUD.healthBar.curHP -= amount;
         }
         else
         {
             myHUD.healthBar.curHP = maxHP;
         }
         // heal animation/sound/etc
+        scr_set_animation_trigger(myAvatar, myAvatar.sprite[animstate.healed]);
     }
-<<<<<<< Updated upstream
-=======
-    
-    //win/lose the game
-    if (myHUD.healthBar.curHP <= 0)
-    {
-        instance_create(room_width/2, room_height/2,obj_win_lose)
-        if (target = global.player[1])
-        {
-            obj_win_lose.image_index = 1;
-        }
-        if (target = global.player[2])
-        {
-            obj_win_lose.image_index = 0;
-        }
-    }
->>>>>>> Stashed changes
 }

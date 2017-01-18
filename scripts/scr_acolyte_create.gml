@@ -1,7 +1,9 @@
 // Character Setup
-myChar.sprite_index = spr_Acolyte;
-myChar.idleImg = 0;
-myChar.damageImg = 0;
+myAvatar.sprite_index = spr_Acolyte;
+myAvatar.sprite[animstate.idle] = spr_Warrior_idle;
+myAvatar.sprite[animstate.damaged] = spr_Warrior_damage;
+myAvatar.sprite[animstate.healed] = spr_Warrior_heal;
+myAvatar.sprite[animstate.won] = spr_Warrior_win;
 
 // HUD Setup
 myHUD.healthBar.maxHP = 150

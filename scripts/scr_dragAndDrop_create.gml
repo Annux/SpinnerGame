@@ -1,7 +1,8 @@
 ///scr_dragAndDropCreate(returnToStart, optional onClick script)
 isClicked = false; // If the object is being dragged
 returnToStart = false;// if the object should return to its start position upon being let go of
-
+initDepth = depth;
+maxDepth = -1000;
 
 if (argument_count == 1)
     {

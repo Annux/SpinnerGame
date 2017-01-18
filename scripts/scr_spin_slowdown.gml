@@ -35,9 +35,7 @@ for(var j = 0; j < symbolsPerColumn; j++)
         symbolObject[i, j].vspeed = 25
         if(symbolObject[i, j].y > rowPos[j] + rowSeperation*3/4)
         {
-            var obj = symbolObject[i, j];
-            //scr_symbol_change_state(obj,footPrint[i,j])
-            obj.vspeed = 0;
+            symbolObject[i, j].vspeed = 0;
             colState[i] = 2;
         }
     }

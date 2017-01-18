@@ -1,13 +1,8 @@
-if(instance_number(object_index) <= global.numManaBars)
-{
-    playerNumber = 1;
+playerNumber = scr_find_my_player();
+if(playerNumber == 1)
     scaleDirection = 1;
-}
 else
-{
-    playerNumber = 2;
     scaleDirection = -1;
-}
 
 curMana = 40;
 maxMana = 50;

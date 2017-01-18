@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_smoke_bomb_object_create()
-scr_rescale()
+            <string>scr_rescale()
+scr_smoke_bomb_object_create()
 </string>
           </argument>
         </arguments>
