@@ -40,6 +40,10 @@ with(buttonInstance)
             scr_spell_manabomb_create();
             break;
     }
+    for(var i = 0; i < global.manaTypes; i++)
+    {
+        spellCostDot[i].spellCost = spellCost[i];
+    }
     
     
 }

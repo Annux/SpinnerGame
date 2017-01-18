@@ -23,11 +23,11 @@ with(instance_find(obj_spinner_machine, 0))
     show_debug_message("shatterd: " + string(Destroyed));
     if(global.turn == 1)
     {
-        scr_unit_takedamage(global.player[2], 10*Destroyed);
+        scr_unit_takedamage(global.player[2], 2*Destroyed);
     }
     else if(global.turn == 2)
     {
-        scr_unit_takedamage(global.player[1], 10*Destroyed);
+        scr_unit_takedamage(global.player[1], 2*Destroyed);
     }
     
     instance_create(0,0,obj_shatter_timer);

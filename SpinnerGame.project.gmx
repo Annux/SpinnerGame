@@ -73,6 +73,7 @@
         </sprites>
         <sprites name="spell buttons">
           <sprite>sprites\spr_spellbutton</sprite>
+          <sprite>sprites\spr_spellcost_dot</sprite>
           <sprite>sprites\spr_shatter</sprite>
           <sprite>sprites\spr_bash</sprite>
           <sprite>sprites\sp_smoke_bomb</sprite>
@@ -158,6 +159,10 @@
             <script>scripts\scr_spell_button_pressed.gml</script>
             <script>scripts\scr_spell_button_draw.gml</script>
             <script>scripts\scr_spell_button_step.gml</script>
+          </scripts>
+          <scripts name="Spell Cost Dots">
+            <script>scripts\scr_spellcost_create.gml</script>
+            <script>scripts\scr_spellcost_draw.gml</script>
           </scripts>
         </scripts>
       </scripts>
@@ -333,9 +338,18 @@
         <script>scripts\scr_actionbar_create.gml</script>
         <script>scripts\scr_actioncoin_animation.gml</script>
       </scripts>
+<<<<<<< Updated upstream
     </scripts>
     <scripts name="Utility">
       <script>scripts\scr_get_weighted_index.gml</script>
+=======
+      <scripts name="Win/Lose">
+        <script>scripts\scr_win.gml</script>
+        <script>scripts\scr_lose.gml</script>
+      </scripts>
+      <script>scripts\scr_find_my_player.gml</script>
+      <script>scripts\scr_shake_object.gml</script>
+>>>>>>> Stashed changes
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -366,6 +380,7 @@
           <object>objects\obj_banner_blue</object>
           <object>objects\obj_banner_red</object>
           <object>objects\obj_spell_button</object>
+          <object>objects\obj_spellcost_dot</object>
         </objects>
         <objects name="HUD">
           <object>objects\obj_HUD</object>

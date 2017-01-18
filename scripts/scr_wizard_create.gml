@@ -1,5 +1,7 @@
 // Character Setup
 myChar.sprite_index = spr_Wizard;
+myChar.idleImg = 0;
+myChar.damageImg = 1;
 
 // HUD Setup
 myHUD.healthBar.maxHP = 75

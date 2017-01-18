@@ -20,3 +20,17 @@ for(var spellindex = 0; spellindex < global.numSpellButtons; spellindex++)
         myBanner.spellButton[spellindex].buttonEnabled = false;
     }
 }
+
+// Check if Shaking
+
+if(shakeTimer > 0)
+{
+    shakeTimer = scr_shake_object(self, origX, origY, 5, shakeTimer);
+    myChar.x = x;
+    myChar.y = y;
+    //scr_shake_object(myChar, origX, origY, 5, shakeTimer);
+    if(shakeTimer <= 0)
+    {
+        myChar.image_index = myChar.idleImg;
+    }
+}

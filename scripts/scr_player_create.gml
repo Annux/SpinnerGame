@@ -8,9 +8,11 @@
 //      -> myBanner.spellButton[1, 2, 3, 4]
 
 {
-
     myChar = instance_create(x, y, obj_player_character);
-
+    origX = x;
+    origY = y;
+    shakeTimer = 0;
+    
     hudX = x + (sprite_width / 3)
     bannerY = y + (sprite_height / 4)
     

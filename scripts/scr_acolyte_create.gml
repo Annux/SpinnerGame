@@ -1,5 +1,7 @@
 // Character Setup
 myChar.sprite_index = spr_Acolyte;
+myChar.idleImg = 0;
+myChar.damageImg = 0;
 
 // HUD Setup
 myHUD.healthBar.maxHP = 150

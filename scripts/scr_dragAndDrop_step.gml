@@ -5,6 +5,7 @@ if (canDrag)
         xDiff = mouse_x - x;
         yDiff = mouse_y - y;
         isClicked = true;
+        depth = maxDepth;
         if (start_script != scr_null)
             {
             script_execute(start_script);
@@ -31,6 +32,8 @@ if (isClicked)
 
 if (mouse_check_button_released(mb_left))
 {
+    isClicked = false;
+    depth = origDepth;
     var i = 0;
     repeat(numberOfDropEntries)
     {
@@ -42,7 +45,6 @@ if (mouse_check_button_released(mb_left))
         }
     ++i;
     }
-    isClicked = false;
 }
 
 
